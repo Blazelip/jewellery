@@ -1,0 +1,16 @@
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1366px;
+
+$mobile-width-only: 767px;
+$tablet-width-only: 1365px;
+
+$screen-mobile: (max-width: $mobile-width-only);
+$screen-tablet: (max-width: $tablet-width-only);
+$screen-only-desktop: (min-width: $desktop-width);
+
+$default-font: "Roboto Condensed", "Verdana", sans-serif;
+$secondary-font: "PT Mono", "Courier New", monospace;
+
+$long-transition: 0.4s;
+$short-transition: 0.2s;

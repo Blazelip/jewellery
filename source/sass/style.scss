@@ -1,0 +1,41 @@
+// SETTINGS
+
+@import "settings/normalize.scss";
+@import "settings/fonts.scss";
+@import "settings/variables.scss";
+@import "settings/mixins.scss";
+@import "settings/global.scss";
+
+// GLOBAL
+
+@import "blocks/page.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/list.scss";
+@import "blocks/button.scss";
+
+// HEADER
+
+@import "blocks/header.scss";
+@import "blocks/scroll-down";
+@import "blocks/contacts.scss";
+
+// MAIN
+
+@import "blocks/bg-images.scss";
+@import "blocks/features.scss";
+@import "blocks/about.scss";
+@import "blocks/catalog.scss";
+@import "blocks/product.scss";
+@import "blocks/feedback.scss";
+
+// FOOTER
+
+@import "blocks/footer.scss";
+@import "blocks/nav.scss";
+@import "blocks/socials.scss";
+@import "blocks/footer-contacts.scss";
+
+// MODAL
+
+@import "blocks/modal.scss";
