@@ -1,0 +1,101 @@
+.hero {
+  min-height: 463px;
+
+  background-color: $hero-bg-color;
+  background-image: url("../img/index/hero-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: $hero-text-color;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/hero-desktop@2x.png");
+  }
+
+  @media #{$screen-tablet} {
+    background-image: url("../img/index/hero-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/hero-tablet@2x.png");
+    }
+  }
+
+  @media #{$screen-mobile} {
+    background-image: url("../img/index/hero-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/hero-mobile@2x.png");
+    }
+  }
+
+  .page--catalog & {
+    min-height: 261px;
+
+    background-image: url("../img/catalog/hero-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog/hero-desktop@2x.png");
+    }
+
+    @media #{$screen-tablet} {
+      background-image: url("../img/catalog/hero-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/catalog/hero-tablet@2x.png");
+      }
+    }
+
+    @media #{$screen-mobile} {
+      background-image: url("../img/catalog/hero-mobile@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/catalog/hero-mobile@2x.png");
+      }
+    }
+  }
+}
+
+.hero__wrapper {
+  text-align: center;
+}
+
+.hero__title {
+  @include font-mixin(45px, 58px);
+
+  margin: 0;
+
+  @media #{$screen-mobile} {
+    @include font-mixin(38px, 49px);
+  }
+
+  .page--catalog & {
+    @include font-mixin(34px, 44px);
+
+    text-transform: uppercase;
+  }
+}
+
+.hero__subtitle {
+  @include font-mixin(38px, 49px);
+
+  margin: 0;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: italic;
+
+  @media #{$screen-mobile} {
+    @include font-mixin(34px, 44px);
+  }
+
+  .page--catalog & {
+    @include font-mixin(22px, 29px);
+
+    @media #{$screen-mobile} {
+      @include font-mixin(22px, 26px);
+    }
+  }
+}
+
+
+

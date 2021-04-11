@@ -1,0 +1,66 @@
+.login {
+  width: 430px;
+  min-height: 586px;
+
+  background-color: $modal-login-bg;
+  background-image: url("../img/sweet-ice-cream-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 430px;
+  box-shadow: 0 5px 32px $modal-box-shadow;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/sweet-ice-cream-desktop@2x.png");
+  }
+}
+
+.login__container {
+  padding: 198px 60px 45px;
+}
+
+.login__form {
+
+}
+
+.login__field {
+  input {
+    @include font-mixin(14px, 21px);
+
+    padding: 9px 0;
+
+    color: $modal-input-text-color;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $modal-input-border-color;
+
+    &::placeholder {
+      @include font-mixin(14px, 21px);
+
+      color: $modal-input-text-color;
+    }
+  }
+}
+
+.login__forgot {
+  @include font-mixin(12px, 18px);
+
+  color: $modal-forgot-text-color;
+}
+
+.login__button {
+
+}
+
+.login__signup {
+  p {
+    @include font-mixin(14px, 21px);
+
+    margin: 0;
+
+    color: $modal-signup-text;
+  }
+
+  a {
+    color: $default-font-color;
+  }
+}

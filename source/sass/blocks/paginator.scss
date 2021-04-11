@@ -1,0 +1,15 @@
+.paginator {
+  display: inline-flex;
+}
+
+.paginator__item {
+
+}
+
+.paginator__number {
+  color: $paginator-text-color;
+
+  &--active {
+    color: $default-font-color;
+  }
+}

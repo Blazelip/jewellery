@@ -1,0 +1,36 @@
+.faq {
+
+}
+
+.faq__list {
+
+}
+
+.faq__item {
+  padding: 50px 38px;
+  border: 1px solid $faq-border-color;
+
+  p {
+    margin: 0;
+
+    font-weight: 400;
+
+    @media #{$screen-mobile} {
+      @include font-mixin(14px, 20px);
+    }
+  }
+}
+
+.faq__control {
+  h3 {
+    @include font-mixin(18px, 23px);
+
+    margin: 0;
+
+    font-weight: 500;
+
+    @media #{$screen-mobile} {
+      @include font-mixin(16px, 22px);
+    }
+  }
+}

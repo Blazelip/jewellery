@@ -1,0 +1,113 @@
+.post {
+  height: 100%;
+
+  background-color: $post-bg-color;
+  background-repeat: no-repeat;
+  background-size: 285px;
+
+  &--care {
+    background-image: url("../img/index/blog-care-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/blog-care-desktop@2x.png");
+    }
+
+    @media #{$screen-tablet} {
+      background-image: url("../img/index/blog-care-tablet@1x.png");
+      background-size: 339px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/blog-care-tablet@2x.png");
+      }
+    }
+
+    @media #{$screen-mobile} {
+      background-image: url("../img/index/blog-care-mobile@1x.png");
+      background-size: 290px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/blog-care-mobile@2x.png");
+      }
+    }
+  }
+
+  &--trends {
+    background-image: url("../img/index/blog-trends-desktop@1x.png");
+    background-size: 570px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/blog-trends-desktop@2x.png");
+    }
+
+    @media #{$screen-tablet} {
+      background-image: url("../img/index/blog-trends-tablet@1x.png");
+      background-size: 339px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/blog-trends-tablet@2x.png");
+      }
+    }
+
+    @media #{$screen-mobile} {
+      background-image: url("../img/index/blog-trends-mobile@1x.png");
+      background-size: 290px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/blog-trends-mobile@2x.png");
+      }
+    }
+  }
+
+  &--power {
+    background-image: url("../img/index/power-desktop@1x.png");
+    background-size: 285px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/power-desktop@2x.png");
+    }
+
+    @media #{$screen-tablet} {
+      background-image: url("../img/index/power-tablet@1x.png");
+      background-size: 339px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/power-tablet@2x.png");
+      }
+    }
+
+    @media #{$screen-mobile} {
+      background-image: url("../img/index/power-mobile@1x.png");
+      background-size: 290px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/power-mobile@2x.png");
+      }
+    }
+  }
+}
+
+.post__link {
+
+}
+
+.post__info {
+  width: 285px;
+  height: 300px;
+  margin-left: auto;
+
+  time {
+    @include font-mixin(14px, 18px);
+
+    color: $post-date-color;
+  }
+
+  h3 {
+    @include font-mixin(26px, 34px);
+
+    margin: 0;
+
+    font-family: $secondary-font;
+    font-weight: 600;
+    color: $post-title-color;
+  }
+}

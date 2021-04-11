@@ -1,0 +1,66 @@
+.modal-cart {
+  width: 500px;
+  height: 439px;
+
+  background-color: $white;
+  box-shadow: 0 4px 32px $modal-cart-box-shadow;
+}
+
+.modal-cart__container {
+
+}
+
+.modal-cart__title {
+  @include font-mixin(26px, 34px);
+}
+
+.modal-cart__form {
+
+}
+
+.modal-cart__panel {
+  padding: 0 35px 40px;
+
+  border-bottom: 1px solid black;
+}
+
+.modal-cart__text {
+  @include font-mixin(18px, 23px);
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+
+    font-weight: 400;
+  }
+}
+
+.modal-cart__quantity {
+
+}
+
+.modal-cart__control {
+
+}
+
+.modal-cart__input {
+  input {
+    @include font-mixin(18px, 23px);
+  }
+}
+
+.modal-cart__rest {
+  padding: 16px 35px 55px;
+  p {
+    @include font-mixin(14px, 18px);
+
+    margin: 0;
+  }
+}
+
+.modal-cart__total {
+  font-weight: 500;
+}

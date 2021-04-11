@@ -1,0 +1,36 @@
+.user-menu {
+  @include font-mixin(14px, 21px);
+
+  display: flex;
+}
+
+.user-menu__link {
+  margin-right: 35px;
+
+  color: $default-font-color;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  span {
+    @media #{$screen-tablet} {
+      display: none;
+    }
+  }
+}
+
+.user-menu__icon {
+  display: none;
+
+  fill: none;
+
+  @media #{$screen-tablet} {
+    display: block;
+
+    .header--nojs &,
+    .header--opened & {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.subscribe {
+  h3 {
+    color: $footer-subscribe-title;
+  }
+
+  p {
+    margin: 0;
+
+    color: $footer-subscribe-subtitle;
+    font-weight: 400;
+
+    @media #{$screen-mobile} {
+      @include font-mixin(16px, 22px);
+    }
+  }
+}
+
+.subscribe__form {
+  input {
+    @include font-mixin(14px, 21px);
+
+    color: $footer-subscribe-input;
+
+    &::placeholder {
+      color: $footer-subscribe-input;
+    }
+  }
+}
+
+.subscribe__btn {
+  color: $footer-subscribe-btn;
+}

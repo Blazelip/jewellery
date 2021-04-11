@@ -1,0 +1,26 @@
+.socials {
+
+}
+
+.socials__item {
+
+}
+
+.socials__link {
+  color: $footer-socials-color;
+
+  &:hover,
+  &:focus {
+    color: rgba($footer-socials-color, 0.6);
+  }
+
+  &:active {
+    color: rgba($footer-socials-color, 0.3);
+  }
+
+  span {
+    @media #{$screen-mobile} {
+      display: none;
+    }
+  }
+}

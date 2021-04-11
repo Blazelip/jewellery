@@ -34,11 +34,7 @@ gulp.task('css', function () {
 
 gulp.task('javascript', function () {
   return gulp.src([
-    './node_modules/vanilla-text-mask/dist/vanillaTextMask.js',
-    './source/js/modal.js',
-    './source/js/validate.js',
-    './source/js/accordeon.js',
-    './source/js/form.js'
+    './source/js/main.js'
   ])
       .pipe(concat('main.js'))
       .pipe(gulp.dest('build/js'));
@@ -80,7 +76,7 @@ gulp.task('images', function () {
 gulp.task('webp', function () {
   return gulp.src('source/img/**/*.{png,jpg}')
       .pipe(webp({quality: 90}))
-      .pipe(gulp.dest('source/img'));
+      .pipe(gulp.dest('build/img'));
 });
 
 gulp.task('sprite', function () {
@@ -117,8 +113,8 @@ gulp.task('watcher', function () {
   gulp.watch('source/sass/**/*.scss', gulp.series('styles'));
   gulp.watch('source/js/*.js', gulp.series('scripts'));
   gulp.watch('source/*.html', gulp.series('html'));
-  gulp.watch('source/img/*.svg', gulp.series('sprite', 'html'));
-  gulp.watch('source/img/*.{png,jpg}', gulp.series('images', 'webp'));
+  gulp.watch('source/img/*.svg', gulp.series('sprite', 'refresh'));
+  gulp.watch('source/img/**/*.{png,jpg}', gulp.series('images', 'webp', 'refresh'));
   gulp.watch('source/css/*.css', gulp.series('styles'));
 });
 

@@ -1,0 +1,29 @@
+.price-filter {
+
+}
+
+.price-filter__scale {
+
+}
+
+.price-filter__line {
+
+}
+
+.price-filter__toggle {
+  &--min {
+
+  }
+
+  &--max {
+
+  }
+}
+
+.price-filter__fields {
+  input {
+    @include font-mixin(14px, 18px);
+  }
+}
+
+

@@ -1,0 +1,20 @@
+.logo {
+  svg {
+    display: block;
+
+    color: $brown;
+
+
+    @media #{$screen-tablet} {
+      .header--nojs &,
+      .header--opened & {
+        color: $white;
+      }
+    }
+
+    @media #{$screen-mobile} {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}

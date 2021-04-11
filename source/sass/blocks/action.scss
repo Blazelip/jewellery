@@ -1,0 +1,12 @@
+.action {
+  @include font-mixin(16px, 21px);
+
+  display: inline-block;
+
+  margin: 0;
+  padding-bottom: 9px;
+
+  color: $default-font-color;
+
+  border-bottom: 1px solid $underline-text-color;
+}

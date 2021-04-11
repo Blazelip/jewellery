@@ -10,4 +10,22 @@
   border: none;
 
   cursor: pointer;
+
+  &--main {
+    @include font-mixin(16px, 21px);
+
+    color: $btn-text-color;
+
+    background-color: $btn-bg-color;
+    border: 1px solid $btn-border-color;
+  }
+
+  &--additional {
+    @include font-mixin(16px, 21px);
+
+    color: $default-font-color;
+
+    background-color: $btn-bg-add-color;
+    border: 1px solid $btn-border-color;
+  }
 }

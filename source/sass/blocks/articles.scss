@@ -1,0 +1,13 @@
+.articles {
+  display: grid;
+  grid-template-columns: 570px 570px;
+  grid-template-rows: 300px 300px;
+  gap: 30px;
+}
+
+.articles__item {
+  &--main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+}

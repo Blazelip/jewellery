@@ -1,17 +1,467 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keyowrds" content="Какие-то ключевые слова через запятую">
-  <meta name="description" content="Какое-то описание сайта">
-  <title>HTML Academy: Печатные платы</title>
+  <meta name="keyowrds" content="">
+  <meta name="description" content="">
+  <title>Online Jewelerry Store CH</title>
   <link rel="preload" href="fonts/poppins-500.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
+  <header class="header header--opened">
+    <div class="header__wrapper wrapper">
+      <button class="header__nav-btn button" type="button" aria-label="Open site menu">
+        <svg width="25" height="16">
+          <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
+        </svg>
+      </button>
 
+      <form class="header__search search">
+        <svg class="search__icon" width="14" height="14">
+          <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+        </svg>
+        <label class="visually-hidden" for="search-field">Type here to search</label>
+        <input type="search" id="search-field" name="search" placeholder="Type here to search">
+        <button class="visually-hidden" type="submit">Search</button>
+      </form>
+
+      <a href="#" class="header__logo logo">
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
+      </a>
+
+      <div class="header__user-menu user-menu">
+        <a href="#" class="user-menu__link login-link login-link--desktop">Login</a>
+        <a href="#" class="user-menu__link">
+          <svg class="user-menu__icon" width="18" height="16">
+            <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+          </svg>
+          <span>Cart 0</span>
+        </a>
+      </div>
+
+      <nav class="header__nav nav nav--closed">
+
+        <form class="nav__search">
+          <svg width="16" height="16">
+            <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+          </svg>
+          <label class="visually-hidden" for="search-field">Type here to search</label>
+          <input type="search" id="search-field" name="search">
+          <button class="visually-hidden" type="submit">Search</button>
+        </form>
+
+        <ul class="nav__list list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">What’s new</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Chokers</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Necklaces</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Rings</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Earrings</a>
+          </li>
+        </ul>
+
+        <ul class="nav__articles list">
+          <li class="nav__articles-item">
+            <a href="#" class="nav__articles-link">About CH</a>
+          </li>
+          <li class="nav__articles-item">
+            <a href="#" class="nav__articles-link">Stores & Hours</a>
+          </li>
+          <li class="nav__articles-item">
+            <a href="#" class="nav__articles-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <a href="#" class="nav__login login-link login-link--mobile">Log In</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Online Jewelerry Store CH</h1>
+    <section class="hero">
+      <div class="hero__wrapper wrapper">
+        <h2 class="visually-hidden">Slogan</h2>
+        <p class="hero__title title">Perfection</p>
+        <p class="hero__subtitle">Made to be yours</p>
+      </div>
+    </section>
+
+    <section class="new">
+      <div class="new__wrapper wrapper">
+        <h2 class="title">New in</h2>
+        <p class="action">Shop Now</p>
+
+        <div class="new__controls controls">
+          <button class="controls__btn button" type="button" aria-label="Go to previous page"></button>
+          <button class="controls__btn button" type="button" aria-label="Go to next page"></button>
+        </div>
+
+        <ul class="goods-list list">
+          <li class="goods-list__item">
+            <article class="product">
+              <a href="#" class="product__link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
+                  <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
+                  <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
+                </picture>
+                <h3>Necklace with amethyst</h3>
+                <p>$ 145</p>
+              </a>
+            </article>
+          </li>
+          <li class="goods-list__item">
+            <article class="product">
+              <a href="#" class="product__link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
+                  <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
+                  <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
+                </picture>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </a>
+            </article>
+          </li>
+          <li class="goods-list__item">
+            <article class="product">
+              <a href="#" class="product__link">
+                <picture>
+                  <source type="image/webp" srcset="img/index/gold-necklace-desktop@1x.webp 1x, img/index/gold-necklace-desktop@2x.webp 2x">
+                  <img src="img/index/gold-necklace-desktop@1x.png" srcset="img/index/gold-necklace-desktop@2x.png 2x" alt="Some product">
+                </picture>
+                <h3>Gold chain</h3>
+                <p>$ 215</p>
+              </a>
+            </article>
+          </li>
+          <li class="goods-list__item">
+            <article class="product">
+              <a href="#" class="product__link">
+                <picture>
+                  <source type="image/webp" srcset="img/index/galaxy-earrings-desktop@1x.webp 1x, img/index/galaxy-earrings-desktop@2x.webp 2x">
+                  <img src="img/index/galaxy-earrings-desktop@1x.png" srcset="img/index/galaxy-earrings-desktop@2x.png 2x" alt="Some product">
+                </picture>
+                <h3>Galaxy earrings</h3>
+                <p>$ 95</p>
+              </a>
+            </article>
+          </li>
+        </ul>
+
+        <ul class="paginator list">
+          <li class="paginator__item">
+            <button class="paginator__number paginator__number--active button">1</button>
+          </li>
+          <li class="paginator__item">
+            <button class="paginator__number button">2</button>
+          </li>
+          <li class="paginator__item">
+            <button class="paginator__number button">3</button>
+          </li>
+          <li class="paginator__item">
+            <button class="paginator__number button">4</button>
+          </li>
+          <li class="paginator__item">
+            <button class="paginator__number button">5</button>
+          </li>
+          <li class="paginator__item">
+            <button class="paginator__number button">6</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="blog__wrapper wrapper">
+        <h2 class="title">Blog</h2>
+        <p class="action">Read All</p>
+
+        <ul class="blog__articles articles list">
+          <li class="articles__item">
+            <article class="post post--care">
+              <a href="#" class="post__link">
+                <div class="post__info">
+                  <time datetime="">September 30, 2019</time>
+                  <h3>How to care for your jewellery</h3>
+                  <a href="#" class="action">Read Article</a>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="articles__item articles__item--main">
+            <article class="post post--trends">
+              <a href="#" class="post__link">
+                <div class="post__info">
+                  <time datetime="">September 16, 2019</time>
+                  <h3>AW 19 trends</h3>
+                  <a href="#" class="action">Read Article</a>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="post post--power">
+              <a href="#" class="post__link">
+                <div class="post__info">
+                  <time datetime="">September 23, 2019</time>
+                  <h3>Power of crystals</h3>
+                  <a href="#" class="action">Read Article</a>
+                </div>
+              </a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrapper">
+        <h2 class="title">Frequently asked questions</h2>
+
+        <ul class="faq__list list">
+          <li class="faq__item">
+            <button class="faq__control button">
+              <h3>What materials are the jewellery made of?</h3>
+            </button>
+            <p>Our jewellerry is made of solid gold, silver or leather.
+              Also, some jewellery contains precious and semiprecious stones and crystals.
+            </p>
+          </li>
+          <li class="faq__item">
+            <button class="faq__control button">
+              <h3>Which countries do you deliver to?</h3>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempore vel ullam amet nostrum ex assumenda magnam voluptatem totam, quia optio!
+            </p>
+          </li>
+          <li class="faq__item">
+            <button class="faq__control button">
+              <h3>What are the payment methods?</h3>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempore vel ullam amet nostrum ex assumenda magnam voluptatem totam, quia optio!
+            </p>
+          </li>
+          <li class="faq__item">
+            <button class="faq__control button">
+              <h3>Can I return the jewellery if it didn’t fit me?</h3>
+            </button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempore vel ullam amet nostrum ex assumenda magnam voluptatem totam, quia optio!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="insta">
+      <div class="wrapper">
+        <h2 class="title">@Chjewellery</h2>
+        <p class="action">Follow Us</p>
+
+        <ul class="insta__photos list">
+          <li class="insta__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/index/insta-7-mobile@1x.webp 1x, img/index/insta-7-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/insta-7-tablet@1x.webp 1x, img/index/insta-7-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/insta-7-desktop@1x.webp 1x, img/index/insta-7-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/index/insta-7-mobile@1x.jpg 1x, img/index/insta-7-mobile@2x.jpg 2x">
+              <source media="(max-width: 1365px)" srcset="img/index/insta-7-tablet@1x.jpg 1x, img/index/insta-7-tablet@2x.jpg 2x">
+              <img src="img/index/insta-7-desktop@1x.jpg" srcset="img/index/insta-7-desktop@2x.jpg 2x" alt="Some product">
+            </picture>
+          </li>
+          <li class="insta__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/index/insta-2-mobile@1x.webp 1x, img/index/insta-2-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/insta-2-tablet@1x.webp 1x, img/index/insta-2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/insta-2-desktop@1x.webp 1x, img/index/insta-2-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/index/insta-2-mobile@1x.jpg 1x, img/index/insta-2-mobile@2x.jpg 2x">
+              <source media="(max-width: 1365px)" srcset="img/index/insta-2-tablet@1x.jpg 1x, img/index/insta-2-tablet@2x.jpg 2x">
+              <img src="img/index/insta-2-desktop@1x.jpg" srcset="img/index/insta-2-desktop@2x.jpg 2x" alt="Some product">
+            </picture>
+          </li>
+          <li class="insta__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/index/insta-3-mobile@1x.webp 1x, img/index/insta-3-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/insta-3-tablet@1x.webp 1x, img/index/insta-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/insta-3-desktop@1x.webp 1x, img/index/insta-3-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/index/insta-3-mobile@1x.jpg 1x, img/index/insta-3-mobile@2x.jpg 2x">
+              <source media="(max-width: 1365px)" srcset="img/index/insta-3-tablet@1x.jpg 1x, img/index/insta-3-tablet@2x.jpg 2x">
+              <img src="img/index/insta-3-desktop@1x.jpg" srcset="img/index/insta-3-desktop@2x.jpg 2x" alt="Some product">
+            </picture>
+          </li>
+          <li class="insta__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/index/insta-5-mobile@1x.webp 1x, img/index/insta-5-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/insta-5-tablet@1x.webp 1x, img/index/insta-5-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/insta-5-desktop@1x.webp 1x, img/index/insta-5-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/index/insta-5-mobile@1x.jpg 1x, img/index/insta-5-mobile@2x.jpg 2x">
+              <source media="(max-width: 1365px)" srcset="img/index/insta-5-tablet@1x.jpg 1x, img/index/insta-5-tablet@2x.jpg 2x">
+              <img src="img/index/insta-5-desktop@1x.jpg" srcset="img/index/insta-5-desktop@2x.jpg 2x" alt="Some product">
+            </picture>
+          </li>
+          <li class="insta__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/index/insta-1-mobile@1x.webp 1x, img/index/insta-1-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/insta-1-tablet@1x.webp 1x, img/index/insta-1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/insta-1-desktop@1x.webp 1x, img/index/insta-1-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/index/insta-1-mobile@1x.jpg 1x, img/index/insta-1-mobile@2x.jpg 2x">
+              <source media="(max-width: 1365px)" srcset="img/index/insta-1-tablet@1x.jpg 1x, img/index/insta-1-tablet@2x.jpg 2x">
+              <img src="img/index/insta-1-desktop@1x.jpg" srcset="img/index/insta-1-desktop@2x.jpg 2x" alt="Some product">
+            </picture>
+          </li>
+          <li class="insta__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/index/insta-7-mobile@1x.webp 1x, img/index/insta-7-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/insta-7-tablet@1x.webp 1x, img/index/insta-7-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/insta-7-desktop@1x.webp 1x, img/index/insta-7-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/index/insta-7-mobile@1x.jpg 1x, img/index/insta-7-mobile@2x.jpg 2x">
+              <source media="(max-width: 1365px)" srcset="img/index/insta-7-tablet@1x.jpg 1x, img/index/insta-7-tablet@2x.jpg 2x">
+              <img src="img/index/insta-7-desktop@1x.jpg" srcset="img/index/insta-7-desktop@2x.jpg 2x" alt="Some product">
+            </picture>
+          </li>
+          <li class="insta__item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/index/insta-6-mobile@1x.webp 1x, img/index/insta-6-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/insta-6-tablet@1x.webp 1x, img/index/insta-6-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/insta-6-desktop@1x.webp 1x, img/index/insta-6-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/index/insta-6-mobile@1x.jpg 1x, img/index/insta-6-mobile@2x.jpg 2x">
+              <source media="(max-width: 1365px)" srcset="img/index/insta-6-tablet@1x.jpg 1x, img/index/insta-6-tablet@2x.jpg 2x">
+              <img src="img/index/insta-6-desktop@1x.jpg" srcset="img/index/insta-6-desktop@2x.jpg 2x" alt="Some product">
+            </picture>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper wrapper">
+      <div class="subscribe">
+        <h3 class="title">The good stuff in your inbox</h3>
+        <p>News and updates from CH. No spam, we promise.</p>
+
+        <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <label class="visually-hidden" for="email-field">Subscribe us</label>
+          <input type="email" id="email-field" name="mail" placeholder="Your E-mail">
+          <button class="subscribe__btn button" type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <ul class="links list">
+        <li class="links__item">
+          <a href="#" class="links__title">Ordering & Payment</a>
+        </li>
+        <li class="links__item">
+          <a href="#" class="links__title">About CH</a>
+        </li>
+        <li class="links__item">
+          <a href="#" class="links__title">Terms & Conditions</a>
+        </li>
+        <li class="links__item">
+          <a href="#" class="links__title">Stores & Hours</a>
+        </li>
+        <li class="links__item">
+          <a href="#" class="links__title">Returns & Exchanges</a>
+        </li>
+        <li class="links__item">
+          <a href="#" class="links__title">Jobs</a>
+        </li>
+        <li class="links__item">
+          <a href="#" class="links__title">Delivery</a>
+        </li>
+        <li class="links__item">
+          <a href="#" class="links__title">Contact Us</a>
+        </li>
+      </ul>
+
+      <ul class="socials list">
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <svg width="8" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+            </svg>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-ig"></use>
+            </svg>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-pin"></use>
+            </svg>
+            <span>Pinterest</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            <svg width="15" height="13">
+              <use xlink:href="img/sprite_auto.svg#icon-tw"></use>
+            </svg>
+            <span>Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <section class="login">
+    <div class="login__container">
+      <h3 class="title">Log In</h3>
+
+      <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <div class="login__field">
+            <label class="visually-hidden" for="mail-field">Your E-mail</label>
+            <input type="email" id="mail-field" name="mail" placeholder="Your E-mail">
+          </div>
+
+          <div class="login__field">
+            <label class="visually-hidden" for="password-field">Your E-mail</label>
+            <input type="password" id="password-field" name="mail" placeholder="Password">
+          </div>
+
+          <a href="#" class="login__forgot">Forgot your password?</a>
+
+          <button class="login__button button button--main" type="submit">Log In</button>
+      </form>
+
+      <div class="login__signup">
+        <p>Don’t have an account?</p>
+        <p><a href="#">Sign Up</a></p>
+      </div>
+    </div>
+
+    <button class="close-cross button" type="button" aria-label="close modal"></button>
+  </section>
 
   <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,9 @@
+.title {
+  @include font-mixin(34px, 44px);
+
+  margin: 0;
+
+  font-family: $secondary-font;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}

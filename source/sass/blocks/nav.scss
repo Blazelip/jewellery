@@ -1,0 +1,157 @@
+.nav {
+  margin-top: 20px;
+  padding: 18px 0;
+
+  border-top: 1px solid $header-border-color;
+
+  text-align: center;
+
+  @media #{$screen-tablet} {
+    position: absolute;
+    left: 0;
+    top: 125px;
+
+    width: 100vw;
+
+    margin: 0;
+    padding: 10px 45px 80px;
+
+    text-align: left;
+
+    background-color: $header-tablet-color;
+    border: 0;
+  }
+
+  @media #{$screen-mobile} {
+    top: 91px;
+
+    padding: 10px 15px 50px;
+  }
+
+  .header--nojs & {
+    @media #{$screen-tablet} {
+      position: static;
+
+      order: 3;
+
+      width: 100%;
+      margin-top: 40px;
+      padding: 0;
+    }
+
+    @media #{$screen-tablet} {
+      margin-top: 30px;
+    }
+  }
+}
+
+.nav__search {
+  position: relative;
+
+  display: none;
+
+  svg {
+    position: absolute;
+
+    left: 10px;
+    top: 50%;
+
+    color: $white;
+
+    transform: translateY(-50%);
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 21px;
+
+    background-color: rgba($white, 0.15);
+  }
+
+  @media #{$screen-tablet} {
+    display: block;
+
+    margin-bottom: 55px;
+  }
+
+  @media #{$screen-mobile} {
+    margin-bottom: 45px;
+  }
+}
+
+.nav__list {
+  @include font-mixin(16px, 24px);
+
+  display: inline-flex;
+
+  @media #{$screen-tablet} {
+    @include font-mixin(24px, 36px);
+
+    display: block;
+
+    margin-bottom: 55px;
+  }
+
+  @media #{$screen-mobile} {
+    margin-bottom: 45px;
+  }
+}
+
+.nav__articles {
+  display: none;
+
+  @media #{$screen-tablet} {
+    @include font-mixin(18px, 23px);
+
+    display: block;
+    margin-bottom: 55px;
+
+    color: rgba($nav-tablet-text-color, 0.75);
+  }
+}
+
+.nav__articles-item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.nav__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media #{$screen-tablet} {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav__link {
+  color: $default-font-color;
+
+  @media #{$screen-tablet} {
+    color: $nav-tablet-text-color;
+  }
+}
+
+.nav__articles-link {
+  @media #{$screen-tablet} {
+    color: rgba($nav-tablet-text-color, 0.75);
+  }
+}
+
+.nav__login {
+
+}

@@ -13,29 +13,52 @@
 @import "blocks/visually-hidden.scss";
 @import "blocks/list.scss";
 @import "blocks/button.scss";
+@import "blocks/title.scss";
+@import "blocks/action.scss";
 
 // HEADER
 
 @import "blocks/header.scss";
-@import "blocks/scroll-down";
-@import "blocks/contacts.scss";
+@import "blocks/search.scss";
+@import "blocks/logo.scss";
+@import "blocks/user-menu.scss";
+@import "blocks/nav.scss";
+@import "blocks/login-link.scss";
 
-// MAIN
+// Main
 
-@import "blocks/bg-images.scss";
-@import "blocks/features.scss";
-@import "blocks/about.scss";
-@import "blocks/catalog.scss";
+// INDEX
+
+@import "blocks/hero.scss";
+@import "blocks/new.scss";
+@import "blocks/goods-list.scss";
 @import "blocks/product.scss";
-@import "blocks/feedback.scss";
+@import "blocks/paginator.scss";
+@import "blocks/blog.scss";
+@import "blocks/articles.scss";
+@import "blocks/post.scss";
+@import "blocks/faq.scss";
+
+// CATALOG
+
+@import "blocks/filters.scss";
+@import "blocks/price-filter.scss";
+@import "blocks/catalog.scss";
+@import "blocks/page-controls.scss";
+
+// PPODUCT
+
+@import "blocks/offer.scss";
 
 // FOOTER
 
 @import "blocks/footer.scss";
-@import "blocks/nav.scss";
+@import "blocks/subscribe.scss";
+@import "blocks/links.scss";
 @import "blocks/socials.scss";
-@import "blocks/footer-contacts.scss";
 
 // MODAL
 
-@import "blocks/modal.scss";
+@import "blocks/login.scss";
+@import "blocks/modal-cart.scss";
+

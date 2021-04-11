@@ -1,0 +1,69 @@
+.offer {
+
+}
+
+.offer__pics {
+
+}
+
+.offer__thumbnails {
+
+}
+
+.offer__thumb-item {
+
+}
+
+.offer__info {
+  h1 {
+
+  }
+}
+
+.offer-price {
+  @include font-mixin(26px, 34px);
+}
+
+.offer__info-switcher {
+
+}
+
+.offer__info-btn {
+  color: $offer__info-btn;
+
+  &--active {
+    color: $default-font-color;
+  }
+}
+
+.offer__details {
+  @include font-mixin(14px, 18px);
+
+  tr {
+    border-bottom: 1px solid $offer__table-border;
+  }
+
+  th {
+
+  }
+
+  td {
+    font-weight: 400;
+  }
+}
+
+.offer__cta {
+
+}
+
+.offer__features {
+  @include font-mixin(14px, 18px);
+
+  display: flex;
+
+  color: $offer__features-color;
+}
+
+.offer__features-item {
+
+}

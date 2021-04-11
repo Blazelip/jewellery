@@ -9,8 +9,59 @@ $screen-mobile: (max-width: $mobile-width-only);
 $screen-tablet: (max-width: $tablet-width-only);
 $screen-only-desktop: (min-width: $desktop-width);
 
-$default-font: "Roboto Condensed", "Verdana", sans-serif;
-$secondary-font: "PT Mono", "Courier New", monospace;
+$white: #ffffff;
+$black: #000000;
+$almost-black: #1d1613;
+$brown: #a87b62;
+$gray: #9b9997;
+$light: #f0eae4;
+
+$default-font-color: $almost-black;
+$underline-text-color: $brown;
+$btn-text-color: $white;
+$btn-bg-color: $brown;
+$btn-bg-add-color: $white;
+$btn-border-color: $brown;
+
+$hero-text-color: $white;
+$hero-bg-color: $brown;
+
+$paginator-text-color: $gray;
+
+$post-bg-color: $light;
+$post-date-color: $gray;
+$post-title-color: $black;
+
+$faq-border-color: $brown;
+
+$footer-bg-color: $black;
+$footer-subscribe-title: $white;
+$footer-subscribe-subtitle: $gray;
+$footer-subscribe-input: $gray;
+$footer-subscribe-btn: $white;
+$footer-links-color: $white;
+$footer-socials-color: $white;
+
+$modal-login-bg: $light;
+$modal-box-shadow: rgba(226, 221, 215, 0.24);
+$modal-input-text-color: $gray;
+$modal-input-border-color: $almost-black;
+$modal-forgot-text-color: $gray;
+$modal-signup-text: $gray;
+
+$offer__info-btn: $gray;
+$offer__table-border: #f6f5f4;
+$offer__features-color: $gray;
+
+$modal-cart-bg: $white;
+$modal-cart-box-shadow: rgba(121, 121, 121, 0.24);
+
+$nav-tablet-text-color: $white;
+$header-tablet-color: $brown;
+$header-border-color: #f6f5f4;
+
+$default-font: "Poppins", "Verdana", sans-serif;
+$secondary-font: "Cormorant Garamond", "Times New Roman", serif;
 
 $long-transition: 0.4s;
 $short-transition: 0.2s;

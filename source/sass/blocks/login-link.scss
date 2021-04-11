@@ -1,0 +1,19 @@
+.login-link {
+  &--desktop {
+    @media #{$screen-tablet} {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @media #{$screen-tablet} {
+      @include font-mixin(18px, 23px);
+
+      display: inline;
+
+      color: $nav-tablet-text-color;
+    }
+  }
+}

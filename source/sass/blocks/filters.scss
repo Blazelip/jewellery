@@ -1,0 +1,43 @@
+.filters {
+
+}
+
+.filters__control {
+  display: none;
+
+  @media #{$screen-tablet} {
+    display: inline-block;
+  }
+}
+
+.filters__form {
+
+}
+
+.filters__set {
+  padding: 0;
+  border: 0;
+
+  legend {
+
+  }
+}
+
+.filters__list {
+
+}
+
+.filters__item {
+  input {
+
+  }
+
+  label {
+    @include font-mixin(14px, 18px);
+  }
+}
+
+.filters__btn {
+
+}
+
