@@ -56,7 +56,8 @@
     }
   }
 
-  &--opened {
+  &--opened,
+  &--nojs {
     p {
       display: block;
     }

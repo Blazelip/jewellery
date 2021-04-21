@@ -35,7 +35,8 @@ gulp.task('css', function () {
 gulp.task('javascript', function () {
   return gulp.src([
     './source/js/vendor.js',
-    './source/js/main.js'
+    './source/js/slider.js',
+    './source/js/accordion.js'
   ])
       .pipe(concat('main.js'))
       .pipe(gulp.dest('build/js'));
