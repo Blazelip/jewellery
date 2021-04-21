@@ -34,6 +34,7 @@ gulp.task('css', function () {
 
 gulp.task('javascript', function () {
   return gulp.src([
+    './source/js/vendor.js',
     './source/js/main.js'
   ])
       .pipe(concat('main.js'))
@@ -112,7 +113,7 @@ gulp.task('clean', function () {
 gulp.task('watcher', function () {
   gulp.watch('source/sass/**/*.scss', gulp.series('styles'));
   gulp.watch('source/js/*.js', gulp.series('scripts'));
-  gulp.watch('source/*.html', gulp.series('html'));
+  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
   gulp.watch('source/img/*.svg', gulp.series('sprite', 'refresh'));
   gulp.watch('source/img/**/*.{png,jpg}', gulp.series('images', 'webp', 'refresh'));
   gulp.watch('source/css/*.css', gulp.series('styles'));

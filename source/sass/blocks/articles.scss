@@ -1,11 +1,27 @@
 .articles {
   display: grid;
   grid-template-columns: 570px 570px;
-  grid-template-rows: 300px 300px;
+  grid-template-rows: auto auto;
   gap: 30px;
+
+  @media #{$screen-tablet} {
+    display: block;
+  }
 }
 
 .articles__item {
+  @media #{$screen-tablet} {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media #{$screen-mobile} {
+    margin-bottom: 40px;
+  }
+
   &--main {
     grid-column: 2 / 3;
     grid-row: 1 / 3;

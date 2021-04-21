@@ -1,7 +1,7 @@
 .post {
+  display: flex;
   height: 100%;
 
-  background-color: $post-bg-color;
   background-repeat: no-repeat;
   background-size: 285px;
 
@@ -14,7 +14,7 @@
 
     @media #{$screen-tablet} {
       background-image: url("../img/index/blog-care-tablet@1x.png");
-      background-size: 339px;
+      background-size: 50%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/blog-care-tablet@2x.png");
@@ -23,7 +23,7 @@
 
     @media #{$screen-mobile} {
       background-image: url("../img/index/blog-care-mobile@1x.png");
-      background-size: 290px;
+      background-size: contain;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/blog-care-mobile@2x.png");
@@ -41,7 +41,7 @@
 
     @media #{$screen-tablet} {
       background-image: url("../img/index/blog-trends-tablet@1x.png");
-      background-size: 339px;
+      background-size: 50%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/blog-trends-tablet@2x.png");
@@ -50,7 +50,7 @@
 
     @media #{$screen-mobile} {
       background-image: url("../img/index/blog-trends-mobile@1x.png");
-      background-size: 290px;
+      background-size: contain;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/blog-trends-mobile@2x.png");
@@ -68,7 +68,7 @@
 
     @media #{$screen-tablet} {
       background-image: url("../img/index/power-tablet@1x.png");
-      background-size: 339px;
+      background-size: 50%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/power-tablet@2x.png");
@@ -77,12 +77,17 @@
 
     @media #{$screen-mobile} {
       background-image: url("../img/index/power-mobile@1x.png");
-      background-size: 290px;
+      background-size: contain;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/power-mobile@2x.png");
       }
     }
+  }
+
+  @media #{$screen-mobile} {
+    height: 512px;
+    flex-direction: column;
   }
 }
 
@@ -91,23 +96,61 @@
 }
 
 .post__info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: center;
+
   width: 285px;
   height: 300px;
   margin-left: auto;
+  padding: 66px 61px;
+
+  background-color: $post-bg-color;
+
+  @media #{$screen-tablet} {
+    align-self: stretch;
+    width: 50%;
+    padding: 67px 88px;
+
+    .post--trends & {
+      padding: 84px 88px;
+    }
+  }
+
+  @media #{$screen-mobile} {
+    width: auto;
+    height: 256px;
+    margin-left: 0;
+    margin-top: auto;
+    padding: 45px 63px;
+
+    .post--trends & {
+      padding: 62px 75px;
+    }
+  }
 
   time {
     @include font-mixin(14px, 18px);
 
     color: $post-date-color;
+
+    margin-bottom: 14px;
   }
 
   h3 {
     @include font-mixin(26px, 34px);
 
     margin: 0;
+    margin-bottom: 38px;
 
     font-family: $secondary-font;
     font-weight: 600;
     color: $post-title-color;
+  }
+
+  .post--power & {
+    margin-left: 0;
+    margin-right: auto;
   }
 }

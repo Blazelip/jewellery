@@ -1,0 +1,16 @@
+.catalog-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 69px;
+
+  @media #{$screen-tablet} {
+    display: block;
+    padding-top: 50px;
+  }
+
+  @media #{$screen-mobile} {
+    padding-top: 39px;
+    padding-bottom: 58px;
+  }
+}

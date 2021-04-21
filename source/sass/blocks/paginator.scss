@@ -1,12 +1,51 @@
 .paginator {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
+
+  @media #{$screen-tablet} {
+    margin-top: 40px;
+  }
+
+  @media #{$screen-mobile} {
+    display: none;
+    margin-top: 30px;
+  }
+
+  .page--catalog & {
+    margin-top: 0;
+    padding-right: 30px;
+
+    @media #{$screen-mobile} {
+      display: flex;
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
 }
 
 .paginator__item {
+  .page--catalog & {
+    @media #{$screen-mobile} {
+      margin-right: 10px;
+    }
+  }
 
+  @media #{$screen-only-desktop} {
+    &:nth-child(n+4) {
+      display: none;
+    }
+
+    .page--catalog &:nth-child(n+4) {
+      display: block;
+    }
+  }
 }
 
 .paginator__number {
+  padding: 6px;
+
   color: $paginator-text-color;
 
   &--active {

@@ -1,46 +1,29 @@
 .nav {
+  width: 100%;
   margin-top: 20px;
   padding: 18px 0;
-
-  border-top: 1px solid $header-border-color;
 
   text-align: center;
 
   @media #{$screen-tablet} {
-    position: absolute;
-    left: 0;
-    top: 125px;
-
-    width: 100vw;
-
-    margin: 0;
-    padding: 10px 45px 80px;
-
-    text-align: left;
-
-    background-color: $header-tablet-color;
-    border: 0;
+    display: none;
   }
 
-  @media #{$screen-mobile} {
-    top: 91px;
-
-    padding: 10px 15px 50px;
-  }
-
+  .header--opened &,
   .header--nojs & {
     @media #{$screen-tablet} {
-      position: static;
+      display: block;
 
-      order: 3;
+      margin: 0;
+      padding: 40px 0 80px;
 
-      width: 100%;
-      margin-top: 40px;
-      padding: 0;
+      text-align: left;
+
+      border: 0;
     }
 
-    @media #{$screen-tablet} {
-      margin-top: 30px;
+    @media #{$screen-mobile} {
+      padding: 30px 0 50px;
     }
   }
 }

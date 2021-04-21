@@ -1,17 +1,62 @@
 .modal-cart {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  display: none;
   width: 500px;
-  height: 439px;
 
   background-color: $white;
   box-shadow: 0 4px 32px $modal-cart-box-shadow;
+
+  transform: translate(-50%, -50%);
+
+  @media #{$screen-tablet} {
+    width: 502px;
+  }
+
+  @media #{$screen-mobile} {
+    width: 290px;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 53.76%;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $pseudo-border-color;
+  }
 }
 
 .modal-cart__container {
+  min-height: 439px;
+  padding: 46px 35px 55px;
 
+  @media #{$screen-tablet} {
+    padding: 46px 30px 55px;
+  }
+
+  @media #{$screen-tablet} {
+    min-height: 519px;
+    padding: 38px 15px 45px;
+  }
 }
 
 .modal-cart__title {
   @include font-mixin(26px, 34px);
+
+  margin-bottom: 42px;
+
+  text-align: center;
 }
 
 .modal-cart__form {
@@ -19,48 +64,119 @@
 }
 
 .modal-cart__panel {
-  padding: 0 35px 40px;
+  display: flex;
 
-  border-bottom: 1px solid black;
+  margin-bottom: 56px;
+
+
+  @media #{$screen-mobile} {
+    margin-bottom: 51px;
+  }
+
+  picture {
+    margin-right: 20px;
+  }
+
+  img {
+    display: block;
+  }
 }
 
 .modal-cart__text {
   @include font-mixin(18px, 23px);
 
+  width: 250px;
+
   h4 {
     margin: 0;
+    margin-bottom: 9px;
+
+    font-family: $secondary-font;
+
+    @media #{$screen-mobile} {
+      @include font-mixin(16px, 21px);
+
+      margin-bottom: 6px;
+    }
   }
 
   p {
     margin: 0;
 
     font-weight: 400;
+
+    @media #{$screen-mobile} {
+      @include font-mixin(16px, 21px);
+    }
   }
 }
 
 .modal-cart__quantity {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  align-items: center;
 }
 
 .modal-cart__control {
-
+  svg {
+    display: block;
+  }
 }
 
 .modal-cart__input {
   input {
     @include font-mixin(18px, 23px);
+
+    width: 14px;
+
+    border: 0;
   }
 }
 
 .modal-cart__rest {
-  padding: 16px 35px 55px;
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 36px;
+
+  @media #{$screen-mobile} {
+    display: block;
+    margin-bottom: 31px;
+  }
+
   p {
     @include font-mixin(14px, 18px);
 
     margin: 0;
+    font-weight: 400;
   }
 }
 
 .modal-cart__total {
   font-weight: 500;
+}
+
+.modal-cart__btns {
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$screen-mobile} {
+    display: block;
+  }
+
+  button {
+    width: 200px;
+    padding: 23px 21px;
+
+    @media #{$screen-mobile} {
+      width: 100%;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

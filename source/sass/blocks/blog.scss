@@ -1,5 +1,29 @@
 .blog {
+  padding: 40px 0 55px;
 
+  @media #{$screen-tablet} {
+    padding: 23px 0 55px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 18px 0 45px;
+  }
+
+  h2 {
+    margin-bottom: 21px;
+  }
+
+  p {
+    margin-bottom: 63px;
+
+    @media #{$screen-tablet} {
+      margin-bottom: 62px;
+    }
+
+    @media #{$screen-mobile} {
+      margin-bottom: 52px;
+    }
+  }
 }
 
 .blog__wrapper {

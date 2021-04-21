@@ -4,6 +4,7 @@
   padding: 0;
 
   font: inherit;
+  text-align: center;
   vertical-align: middle;
 
   background-color: transparent;
@@ -14,6 +15,8 @@
   &--main {
     @include font-mixin(16px, 21px);
 
+    padding: 23px;
+
     color: $btn-text-color;
 
     background-color: $btn-bg-color;
@@ -22,6 +25,8 @@
 
   &--additional {
     @include font-mixin(16px, 21px);
+
+    padding: 23px;
 
     color: $default-font-color;
 

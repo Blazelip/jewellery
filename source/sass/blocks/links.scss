@@ -1,13 +1,37 @@
 .links {
+  display: flex;
+  justify-content: space-between;
+  width: 30.5%;
 
+  @media #{$screen-tablet} {
+    width: 54.6%;
+  }
+
+  @media #{$screen-mobile} {
+    display: block;
+    width: auto;
+    margin-bottom: 49px;
+  }
 }
 
-.links__item {
+.links__column {
+  @media #{$screen-mobile} {
+    margin-bottom: 42px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .links__title {
+  display: block;
+  margin-bottom: 20px;
   color: $footer-links-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover,
   &:focus {

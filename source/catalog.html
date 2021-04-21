@@ -12,32 +12,49 @@
 </head>
 <body class="page page--catalog">
   <header class="header">
-    <div class="wrapper">
+    <div class="header__wrapper wrapper">
+      <button class="header__nav-btn button" type="button" aria-label="Open site menu">
+        <svg width="25" height="16">
+          <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
+        </svg>
+      </button>
+
       <form class="header__search search">
+        <svg class="search__icon" width="14" height="14">
+          <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+        </svg>
         <label class="visually-hidden" for="search-field">Type here to search</label>
-        <input type="search__input" id="search-field" name="search" placeholder="Type here to search">
-        <button class="search__btn button" type="submit">Search</button>
+        <input type="search" id="search-field" name="search" placeholder="Type here to search">
+        <button class="visually-hidden" type="submit">Search</button>
       </form>
 
       <a href="#" class="header__logo logo">
-        <img src="img/logo.svg" alt="Logo">
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
       </a>
 
-      <ul class="header__user-menu user-menu list">
-        <li class="user-menu__item">
-          <a href="#" class="user-menu__link">Login</a>
-        </li>
-        <li class="user-menu__item">
-          <a href="#" class="user-menu__link">
-            <svg class="user-menu__icon" width="18" height="16">
-              <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
-            </svg>
-            <span>Cart 0</span>
-          </a>
-        </li>
-      </ul>
+      <div class="header__user-menu user-menu">
+        <a href="#" class="user-menu__link login-link login-link--desktop">Login</a>
+        <a href="#" class="user-menu__link">
+          <svg class="user-menu__icon" width="18" height="16">
+            <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
+          </svg>
+          <span>Cart 0</span>
+        </a>
+      </div>
 
       <nav class="header__nav nav">
+
+        <form class="nav__search">
+          <svg width="16" height="16">
+            <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+          </svg>
+          <label class="visually-hidden" for="search-field">Type here to search</label>
+          <input type="search" id="search-field" name="search">
+          <button class="visually-hidden" type="submit">Search</button>
+        </form>
+
         <ul class="nav__list list">
           <li class="nav__item">
             <a href="#" class="nav__link">What’s new</a>
@@ -56,7 +73,19 @@
           </li>
         </ul>
 
-        <button class="nav__btn button" type="button" aria-label="Open site menu"></button>
+        <ul class="nav__articles list">
+          <li class="nav__articles-item">
+            <a href="#" class="nav__articles-link">About CH</a>
+          </li>
+          <li class="nav__articles-item">
+            <a href="#" class="nav__articles-link">Stores & Hours</a>
+          </li>
+          <li class="nav__articles-item">
+            <a href="#" class="nav__articles-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <a href="#" class="nav__login login-link login-link--mobile">Log In</a>
       </nav>
     </div>
   </header>
@@ -72,82 +101,136 @@
       </div>
     </section>
 
-    <div class="wrapper">
+    <div class="catalog-container wrapper">
       <section class="filters">
         <h2 class="visually-hidden">Product filters</h2>
-        <button class="filters__control button button--main" type="button">Filters</button>
+        <button class="filters__main-control button button--main" type="button">Filter</button>
         <form class="filters__form" action="https://echo.htmlacademy.ru/" method="GET">
-        <fieldset class="filters__set">
-          <legend>Product</legend>
+          <div class="filters__set">
+            <button class="filters__control button" type="button">
+              <h3>Product</h3>
+              <svg width="15" height="8">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+              </svg>
+            </button>
 
-          <ul class="filters__list list">
-            <li class="filters__item">
-              <input type="checkbox" name="product" value="necklaces" id="necklaces">
-              <label for="necklaces">Necklaces</label>
-            </li>
-            <li class="filters__item">
-              <input type="checkbox" name="product" value="chokers" id="chokers">
-              <label for="chokers">Chokers</label>
-            </li>
-            <li class="filters__item">
-              <input type="checkbox" name="product" value="rings" id="rings">
-              <label for="rings">Rings</label>
-            </li>
-            <li class="filters__item">
-              <input type="checkbox" name="product" value="earrings" id="earrings">
-              <label for="earrings">Earrings</label>
-            </li>
-          </ul>
-        </fieldset>
+            <ul class="filters__list filters__list--opened list">
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="product" value="necklaces" id="necklaces">
+                  <span class="filters__checkbox"></span>
+                  Necklaces
+                </label>
+              </li>
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="product" value="necklaces" id="necklaces">
+                  <span class="filters__checkbox"></span>
+                  Chokers
+                </label>
+              </li>
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="product" value="rings" id="rings">
+                  <span class="filters__checkbox"></span>
+                  Rings
+                </label>
+              </li>
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="product" value="earrings" id="earrings">
+                  <span class="filters__checkbox"></span>
+                  Earrings
+                </label>
+              </li>
+            </ul>
+          </div>
 
-        <fieldset class="filters__set">
-          <legend>Material</legend>
+          <div class="filters__set">
+            <button class="filters__control button" type="button">
+              <h3>Material</h3>
+              <svg width="15" height="8">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+              </svg>
+            </button>
 
-          <ul class="filters__list list">
-            <li class="filters__item">
-              <input type="checkbox" name="material" value="gold" id="gold">
-              <label for="gold">Gold</label>
-            </li>
-            <li class="filters__item">
-              <input type="checkbox" name="material" value="silver" id="silver">
-              <label for="silver">Silver</label>
-            </li>
-          </ul>
-        </fieldset>
+            <ul class="filters__list list">
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="material" value="gold" id="gold">
+                  <span class="filters__checkbox"></span>
+                  Gold
+                </label>
+              </li>
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="material" value="silver" id="silver">
+                  <span class="filters__checkbox"></span>
+                  Silver
+                </label>
+              </li>
+            </ul>
+          </div>
 
-        <fieldset class="filters__set">
-          <legend>Collection</legend>
+          <div class="filters__set">
+            <button class="filters__control button" type="button">
+              <h3>Collection</h3>
+              <svg width="15" height="8">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+              </svg>
+            </button>
 
-          <ul class="filters__list list">
-            <li class="filters__item">
-              <input type="checkbox" name="collection" value="pink-flamingo" id="pink-flamingo">
-              <label for="pink-flamingo">Pink flamingo</label>
-            </li>
-            <li class="filters__item">
-              <input type="checkbox" name="collection" value="dreams" id="dreams">
-              <label for="dreams">Dreams</label>
-            </li>
-          </ul>
-        </fieldset>
+            <ul class="filters__list list">
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="collection" value="pink-flamingo" id="pink-flamingo">
+                  <span class="filters__checkbox"></span>
+                  Pink flamingo
+                </label>
+              </li>
+              <li class="filters__item">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="collection" value="dreams" id="dreams">
+                  <span class="filters__checkbox"></span>
+                  Dreams
+                </label>
+              </li>
+            </ul>
+          </div>
 
-        <fieldset class="filters__set">
-          <legend>Price</legend>
+          <div class="filters__set">
+            <button class="filters__control button" type="button">
+              <h3>Price</h3>
+              <svg width="15" height="8">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+              </svg>
+            </button>
 
-          <div class="price-filter">
-            <div class="price-filter__scale">
-              <div class="price-filter__line"></div>
-              <button class="button price-filter__toggle price-filter__toggle--min" aria-label="Min price"></button>
-              <button class="button price-filter__toggle price-filter__toggle--max" aria-label="Max price"></button>
-            </div>
-            <div class="price-filter__fields">
-              <input type="number" name="min-price" value="0">
-              <input type="number" name="max-price" value="5000">
+            <div class="price-filter price-filter--opened">
+              <div class="price-filter__scale">
+                <div class="price-filter__line"></div>
+                <button class="button price-filter__toggle price-filter__toggle--min" aria-label="Min price"></button>
+                <button class="button price-filter__toggle price-filter__toggle--max" aria-label="Max price"></button>
+              </div>
+              <div class="price-filter__fields">
+                <div class="price-filter__field">
+                  <span>$</span>
+                  <input type="number" name="min-price" value="55">
+                </div>
+                <div class="price-filter__field">
+                  <span>$</span>
+                  <input type="number" name="max-price" value="155">
+                </div>
+              </div>
             </div>
           </div>
-        </fieldset>
 
-        <button class="filters__btn button button--main" type="submit">Apply</button>
-        <button class="filters__btn button button--additional" type="reset">Clear All</button>
+          <div class="filters__btn-container">
+            <button class="filters__btn button button--main" type="submit">Apply</button>
+            <button class="filters__btn button button--additional" type="reset">Clear All</button>
+          </div>
+
+          <button class="filters__close button" type="button" aria-label="close modal"></button>
         </form>
       </section>
 
@@ -166,9 +249,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/pearl-earrings-tablet@1x.jpg 1x, pearl-earrings-tablet@2x.jpg 2x">
                   <img src="img/catalog/pearl-earrings-desktop@1x.jpg" srcset="img/catalog/pearl-earrings-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Double pearl earrings</h3>
-                <p>$ 115</p>
               </a>
+              <h3>Double pearl earrings</h3>
+              <p>$ 115</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -182,9 +265,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/black-choker-tablet@1x.jpg 1x, black-choker-tablet@2x.jpg 2x">
                   <img src="img/catalog/black-choker-desktop@1x.jpg" srcset="img/catalog/black-choker-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Choker with gold bead</h3>
-                <p>$ 55</p>
               </a>
+              <h3>Choker with gold bead</h3>
+              <p>$ 55</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -198,9 +281,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/gold-necklace-tablet@1x.jpg 1x, gold-necklace-tablet@2x.jpg 2x">
                   <img src="img/catalog/gold-necklace-desktop@1x.jpg" srcset="img/catalog/gold-necklace-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Gold layered necklace</h3>
-                <p>$ 155</p>
               </a>
+              <h3>Gold layered necklace</h3>
+              <p>$ 155</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -214,9 +297,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/blue-gemstone-tablet@1x.jpg 1x, blue-gemstone-tablet@2x.jpg 2x">
                   <img src="img/catalog/blue-gemstone-desktop@1x.jpg" srcset="img/catalog/blue-gemstone-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Blue gemstone pendant</h3>
-                <p>$ 105</p>
               </a>
+              <h3>Blue gemstone pendant</h3>
+              <p>$ 105</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -230,9 +313,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/boho-earrings-tablet@1x.jpg 1x, boho-earrings-tablet@2x.jpg 2x">
                   <img src="img/catalog/boho-earrings-desktop@1x.jpg" srcset="img/catalog/boho-earrings-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Boho earrings</h3>
-                <p>$ 75</p>
               </a>
+              <h3>Boho earrings</h3>
+              <p>$ 75</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -246,9 +329,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/bird-necklace-tablet@1x.jpg 1x, bird-necklace-tablet@2x.jpg 2x">
                   <img src="img/catalog/bird-necklace-desktop@1x.jpg" srcset="img/catalog/bird-necklace-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Gold bird necklace</h3>
-                <p>$ 135</p>
               </a>
+              <h3>Gold bird necklace</h3>
+              <p>$ 135</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -262,9 +345,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/black-necklace-tablet@1x.jpg 1x, black-necklace-tablet@2x.jpg 2x">
                   <img src="img/catalog/black-necklace-desktop@1x.jpg" srcset="img/catalog/black-necklace-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Black leather choker</h3>
-                <p>$ 85</p>
               </a>
+              <h3>Black leather choker</h3>
+              <p>$ 85</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -278,9 +361,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/purple-necklace-tablet@1x.jpg 1x, purple-necklace-tablet@2x.jpg 2x">
                   <img src="img/catalog/purple-necklace-desktop@1x.jpg" srcset="img/catalog/purple-necklace-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Necklace with amethyst</h3>
-                <p>$ 145</p>
               </a>
+              <h3>Necklace with amethyst</h3>
+              <p>$ 145</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -294,9 +377,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/elephant-earrings-tablet@1x.jpg 1x, elephant-earrings-tablet@2x.jpg 2x">
                   <img src="img/catalog/elephant-earrings-desktop@1x.jpg" srcset="img/catalog/elephant-earrings-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Elephant earrings</h3>
-                <p>$ 95</p>
               </a>
+              <h3>Elephant earrings</h3>
+              <p>$ 95</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -310,9 +393,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/threader-necklace-tablet@1x.jpg 1x, threader-necklace-tablet@2x.jpg 2x">
                   <img src="img/catalog/threader-necklace-desktop@1x.jpg" srcset="img/catalog/threader-necklace-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Threader necklace</h3>
-                <p>$ 115</p>
               </a>
+              <h3>Threader necklace</h3>
+              <p>$ 115</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -326,9 +409,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/origami-necklace-tablet@1x.jpg 1x, origami-necklace-tablet@2x.jpg 2x">
                   <img src="img/catalog/origami-necklace-desktop@1x.jpg" srcset="img/catalog/origami-necklace-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Origami crane necklace</h3>
-                <p>$ 105</p>
               </a>
+              <h3>Origami crane necklace</h3>
+              <p>$ 105</p>
             </article>
           </li>
           <li class="catalog__item">
@@ -342,9 +425,9 @@
                   <source media="(max-width: 1365px)" srcset="img/catalog/marble-earrings-tablet@1x.jpg 1x, marble-earrings-tablet@2x.jpg 2x">
                   <img src="img/catalog/marble-earrings-desktop@1x.jpg" srcset="img/catalog/marble-earrings-desktop@2x.jpg 2x" alt="Some product">
                 </picture>
-                <h3>Marble earrings</h3>
-                <p>$ 95</p>
               </a>
+              <h3>Marble earrings</h3>
+              <p>$ 95</p>
             </article>
           </li>
         </ul>
@@ -385,41 +468,35 @@
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="POST">
           <label class="visually-hidden" for="email-field">Subscribe us</label>
           <input type="email" id="email-field" name="mail" placeholder="Your E-mail">
-          <button class="subscribe__btn button" type="submit">Sign Up</button>
+          <button class="subscribe__btn button" type="submit">
+            <span>Sign Up</span>
+            <svg width="30" height="11">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
         </form>
       </div>
 
-      <ul class="links list">
-        <li class="links__item">
+      <div class="links">
+        <div class="links__column">
           <a href="#" class="links__title">Ordering & Payment</a>
-        </li>
-        <li class="links__item">
-          <a href="#" class="links__title">About CH</a>
-        </li>
-        <li class="links__item">
           <a href="#" class="links__title">Terms & Conditions</a>
-        </li>
-        <li class="links__item">
-          <a href="#" class="links__title">Stores & Hours</a>
-        </li>
-        <li class="links__item">
           <a href="#" class="links__title">Returns & Exchanges</a>
-        </li>
-        <li class="links__item">
-          <a href="#" class="links__title">Jobs</a>
-        </li>
-        <li class="links__item">
           <a href="#" class="links__title">Delivery</a>
-        </li>
-        <li class="links__item">
+        </div>
+
+        <div class="links__column">
+          <a href="#" class="links__title">About CH</a>
+          <a href="#" class="links__title">Stores & Hours</a>
+          <a href="#" class="links__title">Jobs</a>
           <a href="#" class="links__title">Contact Us</a>
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <ul class="socials list">
         <li class="socials__item">
           <a href="#" class="socials__link">
-            <svg width="8" height="15">
+            <svg width="15" height="15">
               <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
             </svg>
             <span>Facebook</span>
@@ -455,7 +532,7 @@
 
   <section class="login">
     <div class="login__container">
-      <h3>Log In</h3>
+      <h3 class="title">Log In</h3>
 
       <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
           <div class="login__field">

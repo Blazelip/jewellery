@@ -1,7 +1,18 @@
 .page-controls {
+  display: flex;
+  justify-content: space-between;
 
+  margin-top: 65px;
+
+  @media #{$screen-mobile} {
+    justify-content: center;
+
+    margin-top: 37px;
+  }
 }
 
 .page-controls__text {
-
+  @media #{$screen-mobile} {
+    display: none;
+  }
 }

@@ -1,7 +1,23 @@
 .footer {
+  padding: 90px 0 99px;
+
   background-color: $footer-bg-color;
+
+
+  @media #{$screen-tablet} {
+    padding: 52px 0 58px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 52px 0 64px;
+  }
 }
 
 .footer__wrapper {
   display: flex;
+  flex-wrap: wrap;
+
+  @media #{$screen-mobile} {
+    display: block;
+  }
 }

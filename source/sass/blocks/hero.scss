@@ -1,4 +1,7 @@
 .hero {
+  display: flex;
+  align-items: center;
+
   min-height: 463px;
 
   background-color: $hero-bg-color;
@@ -62,7 +65,7 @@
 .hero__title {
   @include font-mixin(45px, 58px);
 
-  margin: 0;
+  text-transform: uppercase;
 
   @media #{$screen-mobile} {
     @include font-mixin(38px, 49px);
@@ -70,8 +73,6 @@
 
   .page--catalog & {
     @include font-mixin(34px, 44px);
-
-    text-transform: uppercase;
   }
 }
 

@@ -1,0 +1,17 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$screen-mobile} {
+    display: none;
+  }
+}
+
+.controls__btn {
+  color: $brown;
+
+  &--previous {
+    transform: rotate(-180deg);
+  }
+}

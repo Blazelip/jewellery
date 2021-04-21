@@ -1,20 +1,67 @@
 .login {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+
+  display: none;
   width: 430px;
-  min-height: 586px;
 
   background-color: $modal-login-bg;
   background-image: url("../img/sweet-ice-cream-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: 430px;
+  background-size: contain;
   box-shadow: 0 5px 32px $modal-box-shadow;
+
+  transform: translate(-50%, -50%);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/sweet-ice-cream-desktop@2x.png");
   }
+
+  @media #{$screen-tablet} {
+    width: 442px;
+
+    background-image: url("../img/sweet-ice-cream-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/sweet-ice-cream-tablet@2x.png");
+    }
+  }
+
+  @media #{$screen-mobile} {
+    width: 270px;
+
+    background-image: url("../img/sweet-ice-cream-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/sweet-ice-cream-mobile@2x.png");
+    }
+  }
+
+  &--opened {
+    display: block;
+  }
 }
 
 .login__container {
-  padding: 198px 60px 45px;
+  min-height: 586px;
+  padding: 187px 45px 60px;
+
+  @media #{$screen-tablet} {
+    padding: 187px 51px 60px;
+  }
+
+  @media #{$screen-mobile} {
+    min-height: 470px;
+    padding: 121px 15px 45px;
+  }
+
+  h3 {
+    margin-bottom: 45px;
+
+    text-align: center;
+  }
 }
 
 .login__form {
@@ -22,9 +69,16 @@
 }
 
 .login__field {
+  margin-bottom: 25px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   input {
     @include font-mixin(14px, 21px);
 
+    width: 100%;
     padding: 9px 0;
 
     color: $modal-input-text-color;
@@ -44,14 +98,24 @@
 .login__forgot {
   @include font-mixin(12px, 18px);
 
+  display: block;
+
+  margin-top: 5px;
+
   color: $modal-forgot-text-color;
+  text-align: right;
 }
 
 .login__button {
-
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 15px;
 }
 
 .login__signup {
+  display: flex;
+  justify-content: center;
+
   p {
     @include font-mixin(14px, 21px);
 
@@ -61,6 +125,7 @@
   }
 
   a {
+    margin-left: 5px;
     color: $default-font-color;
   }
 }

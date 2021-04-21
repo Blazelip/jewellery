@@ -1,0 +1,104 @@
+.insta {
+  padding: 50px 0 130px;
+
+  @media #{$screen-tablet} {
+    padding: 38px 0 80px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 28px 0 70px;
+  }
+
+  text-align: center;
+
+  h2 {
+    margin-bottom: 33px;
+
+    @media #{$screen-tablet} {
+      margin-bottom: 21px;
+    }
+
+    @media #{$screen-mobile} {
+      margin-bottom: 21px;
+    }
+  }
+
+  p {
+    margin-bottom: 60px;
+
+    @media #{$screen-mobile} {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+
+.insta__photos {
+  display: flex;
+
+  text-align: left;
+  flex-wrap: wrap;
+
+  @media #{$screen-mobile} {
+    max-width: 290px;
+    margin: 0 auto;
+  }
+}
+
+.insta__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    display: block;
+  }
+
+  &--1 {
+    margin-right: 27px;
+
+    @media #{$screen-tablet} {
+      margin-right: 18px;
+    }
+
+    @media #{$screen-mobile} {
+      min-height: 232px;
+      margin-right: 15px;
+      margin-bottom: 9px;
+    }
+  }
+
+
+  &--2 {
+    margin-right: 30px;
+
+    @media #{$screen-tablet} {
+      margin-right: 18px;
+    }
+
+    @media #{$screen-mobile} {
+      margin-right: 0;
+    }
+  }
+
+  &--3 {
+    margin-right: 10px;
+
+    @media #{$screen-mobile} {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &--4 {
+    align-items: flex-end;
+
+    @media #{$screen-mobile} {
+      display: none;
+    }
+  }
+}

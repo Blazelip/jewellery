@@ -1,12 +1,35 @@
 .catalog {
+  width: 74.4%;
 
+  @media #{$screen-tablet} {
+    width: auto;
+  }
 }
 
 .catalog__list {
   display: flex;
   flex-wrap: wrap;
+  margin: -20px -15px;
+
+  @media #{$screen-tablet} {
+    margin: -18px -15px;
+  }
+
+  @media #{$screen-mobile} {
+    margin: -13px -15px;
+  }
 }
 
 .catalog__item {
+  width: calc(100% / 3 - 30px);
+  margin: 20px 15px;
 
+  @media #{$screen-tablet} {
+    margin: 18px 15px;
+  }
+
+  @media #{$screen-mobile} {
+    width: calc(100% / 2 - 30px);
+    margin: 13px 15px;
+  }
 }

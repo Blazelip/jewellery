@@ -31,16 +31,20 @@
 
 @import "blocks/hero.scss";
 @import "blocks/new.scss";
+@import "blocks/controls.scss";
 @import "blocks/goods-list.scss";
 @import "blocks/product.scss";
 @import "blocks/paginator.scss";
+@import "blocks/paginator-form.scss";
 @import "blocks/blog.scss";
 @import "blocks/articles.scss";
 @import "blocks/post.scss";
 @import "blocks/faq.scss";
+@import "blocks/insta.scss";
 
 // CATALOG
 
+@import "blocks/catalog-container.scss";
 @import "blocks/filters.scss";
 @import "blocks/price-filter.scss";
 @import "blocks/catalog.scss";
@@ -61,4 +65,5 @@
 
 @import "blocks/login.scss";
 @import "blocks/modal-cart.scss";
+@import "blocks/close-cross.scss";
 

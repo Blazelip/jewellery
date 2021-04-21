@@ -1,9 +1,20 @@
 .filters {
+  width: 21.4%;
 
+  @media #{$screen-tablet} {
+    width: auto;
+    margin-bottom: 50px;
+  }
+
+  @media #{$screen-mobile} {
+    margin-bottom: 40px;
+  }
 }
 
-.filters__control {
+.filters__main-control {
   display: none;
+
+  width: 100%;
 
   @media #{$screen-tablet} {
     display: inline-block;
@@ -11,33 +22,168 @@
 }
 
 .filters__form {
+  @media #{$screen-tablet} {
+    display: none;
+    position: fixed;
 
+    top: 50%;
+    left: 50%;
+
+    width: 442px;
+
+    background-color: $white;
+    box-shadow: 0 5px 32px $filters-box-shadow;
+
+    transform: translate(-50%, -50%);
+  }
+
+  @media #{$screen-mobile} {
+    width: 270px;
+  }
+
+  &--opened {
+    display: block;
+  }
 }
 
 .filters__set {
+  margin-top: -1px;
   padding: 0;
-  border: 0;
 
-  legend {
+  border: 1px solid $brown;
 
+  @media #{$screen-tablet} {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  h3 {
+    @include font-mixin(16px, 21px);
+
+    margin: 0;
+    font-weight: 500;
+  }
+
+  svg {
+    fill: none;
+    color: $brown;
+
+    @media #{$screen-tablet} {
+      width: 23px;
+      height: 12px;
+    }
+
+    @media #{$screen-tablet} {
+      width: 20px;
+      height: 10px;
+    }
+  }
+
+  &--opened {
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.filters__control {
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+  padding: 24px 25px 23px;
+
+  justify-content: space-between;
+
+  @media #{$screen-tablet} {
+    padding: 35px 40px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 25px 20px;
   }
 }
 
 .filters__list {
+  display: none;
 
+  padding: 0 35px 24px;
+
+  &--opened {
+    display: block;
+  }
 }
 
 .filters__item {
-  input {
+  margin-bottom: 13px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  input:checked + .filters__checkbox {
+    background-color: $brown;
+  }
+
+  input:focus + .filters__checkbox {
+    outline: 1px solid #212121;
   }
 
   label {
     @include font-mixin(14px, 18px);
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+.filters__checkbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid $brown;
+
+  margin-right: 10px;
+
+  cursor: pointer;
+}
+
+.filters__btn-container {
+  padding-top: 35px;
+
+  @media #{$screen-tablet} {
+    padding: 40px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 30px 20px;
   }
 }
 
 .filters__btn {
+  width: 100%;
+  margin-bottom: 25px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
+.filters__close {
+  display: none;
+
+  @media #{$screen-tablet} {
+    display: inline-block;
+
+    position: absolute;
+    top: -18px;
+    right: -18px;
+
+    width: 32px;
+    height: 32px;
+
+    background-color: transparent;
+    background-image: url("../img/close-filter.svg");
+    background-repeat: no-repeat;
+  }
+}

@@ -1,27 +1,84 @@
 .faq {
+  padding: 65px 0;
 
+  @media #{$screen-tablet} {
+    padding: 15px 0 43px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 15px 0 30px;
+  }
+
+  h2 {
+    margin-bottom: 49px;
+
+    text-align: center;
+
+    @media #{$screen-mobile} {
+      margin-bottom: 29px;
+    }
+  }
 }
 
 .faq__list {
+  padding: 0 100px;
 
+  @media #{$screen-tablet} {
+    padding: 0;
+  }
 }
 
 .faq__item {
-  padding: 50px 38px;
+  margin-top: -1px;
+
   border: 1px solid $faq-border-color;
 
   p {
+    display: none;
+    max-width: 515px;
     margin: 0;
+    margin-top: 8px;
+    padding-left: 10px;
 
     font-weight: 400;
 
+    @media #{$screen-tablet} {
+      max-width: 575px;
+      margin-top: 29px;
+      padding-left: 0;
+    }
+
     @media #{$screen-mobile} {
       @include font-mixin(14px, 20px);
+
+      max-width: 205px;
+      margin-top: 14px;
+    }
+  }
+
+  &--opened {
+    p {
+      display: block;
     }
   }
 }
 
 .faq__control {
+  position: relative;
+
+  width: 100%;
+  padding: 43px 50px 42px 42px;
+
+  text-align: left;
+
+  @media #{$screen-tablet} {
+    padding: 43px 50px 42px 48px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 16px 24px 21px;
+  }
+
   h3 {
     @include font-mixin(18px, 23px);
 
@@ -32,5 +89,37 @@
     @media #{$screen-mobile} {
       @include font-mixin(16px, 22px);
     }
+  }
+
+  svg {
+    position: absolute;
+
+    top: 50px;
+    right: 49px;
+
+    fill: none;
+    color: $brown;
+
+    @media #{$screen-tablet} {
+      width: 23px;
+      height: 12px;
+    }
+
+    @media #{$screen-mobile} {
+      top: 23px;
+      right: 22px;
+    }
+
+    .faq__item--opened & {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.faq__break {
+  display: none;
+
+  @media #{$screen-mobile} {
+    display: block;
   }
 }
