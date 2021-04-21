@@ -121,4 +121,5 @@ gulp.task('watcher', function () {
 });
 
 gulp.task('build', gulp.series('clean', 'images', 'webp', 'css', 'javascript', 'sprite', 'copy', 'html'));
+// gulp.task('build', gulp.series('clean', 'css', 'javascript', 'sprite', 'copy', 'html'));
 gulp.task('start', gulp.series('build', 'server', 'watcher'));
