@@ -1,23 +1,24 @@
 .goods-list {
   display: flex;
-  flex-wrap: wrap;
 
-  margin: -15px;
+  // margin: -15px;
 }
 
 .goods-list__item {
-  width: calc(100% / 4 - 30px);
-  margin: 15px;
+  flex-shrink: 0;
+  // width: calc(100% / 4 - 30px);
+  // margin: 15px;
+  // width: 270px;
 
-  &:nth-child(n+5) {
-    display: none;
-  }
+  // &:nth-child(n+5) {
+  //   display: none;
+  // }
 
   @media #{$screen-tablet} {
-    width: calc(100% / 2 - 30px);
+    // width: calc(100% / 2 - 30px);
 
-    &:nth-child(n+3) {
-      display: none;
-    }
+    // &:nth-child(n+3) {
+    //   display: none;
+    // }
   }
 }

@@ -138,4 +138,14 @@
   }
 }
 
+.swiper-pagination-bullet {
+  padding: 6px;
+
+  color: $paginator-text-color;
+
+  &--active {
+    color: $default-font-color;
+  }
+}
+
 
