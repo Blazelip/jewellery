@@ -889,9 +889,15 @@ img {
   .product__link img {
     display: block;
     width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
+    height: 100%; }
+    @media (max-width: 1365px) {
+      .product__link img {
+        width: 100%;
+        height: 100%; } }
+    @media (max-width: 767px) {
+      .product__link img {
+        width: 130px;
+        height: 136px; } }
 
 .paginator {
   display: -webkit-box;
@@ -1039,7 +1045,8 @@ img {
       background-image: url("../img/index/blog-trends-mobile@2x.png"); } }
   .post--power {
     background-image: url("../img/index/power-desktop@1x.png");
-    background-size: 285px; }
+    background-size: 285px;
+    background-position: right 0 top 0; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .post--power {
         background-image: url("../img/index/power-desktop@2x.png"); } }
@@ -1116,6 +1123,9 @@ img {
   .post--power .post__info {
     margin-left: 0;
     margin-right: auto; }
+    @media (max-width: 767px) {
+      .post--power .post__info {
+        margin-right: 0; } }
 
 .faq {
   padding: 65px 0; }

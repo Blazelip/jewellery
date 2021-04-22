@@ -61,6 +61,7 @@
   &--power {
     background-image: url("../img/index/power-desktop@1x.png");
     background-size: 285px;
+    background-position: right 0 top 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/power-desktop@2x.png");
@@ -152,5 +153,9 @@
   .post--power & {
     margin-left: 0;
     margin-right: auto;
+
+    @media #{$screen-mobile} {
+      margin-right: 0;
+    }
   }
 }
