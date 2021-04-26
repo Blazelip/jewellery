@@ -31,6 +31,7 @@
 
 @import "blocks/hero.scss";
 @import "blocks/new.scss";
+@import "blocks/swiper.scss";
 @import "blocks/controls.scss";
 @import "blocks/goods-list.scss";
 @import "blocks/product.scss";
@@ -46,6 +47,7 @@
 
 @import "blocks/catalog-container.scss";
 @import "blocks/filters.scss";
+@import "blocks/dropdown.scss";
 @import "blocks/price-filter.scss";
 @import "blocks/catalog.scss";
 @import "blocks/page-controls.scss";
@@ -63,8 +65,10 @@
 
 // MODAL
 
+@import "blocks/modal.scss";
+@import "blocks/overlay.scss";
+@import "blocks/close-cross.scss";
 @import "blocks/login.scss";
 @import "blocks/modal-cart.scss";
-@import "blocks/close-cross.scss";
-@import "blocks/swiper.scss";
+@import "blocks/modal-container.scss";
 

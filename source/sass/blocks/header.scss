@@ -1,6 +1,20 @@
 .header {
   padding-top: 30px;
 
+  @media #{$screen-only-desktop} {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 114px;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $pseudo-border-color;
+    }
+  }
+
   @media #{$screen-tablet} {
     position: relative;
 
@@ -13,17 +27,21 @@
 
   &--opened,
   &--nojs {
-    padding-bottom: 0;
+    @media #{$screen-tablet} {
+      padding-bottom: 0;
 
-    background-color: $header-tablet-color;
+      background-color: $header-tablet-color;
+    }
   }
 
   &--opened {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 10;
 
     width: 100%;
+    height: 100vh;
   }
 }
 
@@ -45,7 +63,10 @@
   @media #{$screen-tablet} {
     display: inline-block;
 
-    .header--nojs &,
+    .header--nojs & {
+      display: none;
+    }
+
     .header--opened & {
       color: $white;
     }

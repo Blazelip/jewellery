@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const swiper = new Swiper('.swiper-container', {
+  var slider = {
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -17,6 +17,21 @@
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
+      // when window width is >= 1024px
+      1366: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        pagination: {
+          type: 'bullets',
+        },
+      },
       // when window width is >= 320px
       320: {
         slidesPerView: 2,
@@ -29,24 +44,12 @@
           },
         },
       },
-      // when window width is >= 768px
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        slidesPerGroup: 2,
-        pagination: {
-          type: 'bullets',
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
-        },
-      },
-      // when window width is >= 1366px
-      1366: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        slidesPerGroup: 4,
-      },
     },
-  });
+  };
+
+  var astivateSlider = function () {
+    slider = new window.Swiper('.swiper-container', slider);
+  };
+
+  astivateSlider();
 })();

@@ -1,0 +1,11 @@
+.modal-container {
+  padding: 70px 0;
+
+  @media #{$screen-tablet} {
+    padding: 45px 0;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 30px 0;
+  }
+}

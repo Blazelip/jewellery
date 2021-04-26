@@ -16,7 +16,7 @@
 'use strict';
 
 (() => {
-  const swiper = new Swiper('.swiper-container', {
+  var slider = {
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -32,6 +32,21 @@
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
+      // when window width is >= 1024px
+      1366: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        pagination: {
+          type: 'bullets',
+        },
+      },
       // when window width is >= 320px
       320: {
         slidesPerView: 2,
@@ -44,26 +59,14 @@
           },
         },
       },
-      // when window width is >= 768px
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        slidesPerGroup: 2,
-        pagination: {
-          type: 'bullets',
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
-        },
-      },
-      // when window width is >= 1366px
-      1366: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        slidesPerGroup: 4,
-      },
     },
-  });
+  };
+
+  var astivateSlider = function () {
+    slider = new window.Swiper('.swiper-container', slider);
+  };
+
+  astivateSlider();
 })();
 
 'use strict';
@@ -73,15 +76,198 @@
     const faqList = document.querySelector(`.faq__list`);
     const faqItems = document.querySelectorAll(`.faq__item--nojs`);
 
+    const filterSection = document.querySelector(`.filters`);
+    const filtersForm = document.querySelector(`.filters__form`);
+    const filters = document.querySelectorAll(`.dropdown--nojs`);
+
+    const onFilterClick = (evt) => {
+      const target = evt.target;
+      if (target.closest(`.dropdown__btn`)) {
+        target.closest(`.dropdown`).classList.toggle(`dropdown--opened`);
+      }
+    };
+
     const onFaqItemClick = (evt) => {
       const item = evt.target.closest(`.faq__item`);
       item.classList.toggle(`faq__item--opened`);
     };
 
-    faqItems.forEach((item) => {
-      item.classList.remove(`faq__item--nojs`);
-    });
+    if (filterSection) {
+      filterSection.classList.remove(`filters--nojs`);
+    }
 
-    faqList.addEventListener(`click`, onFaqItemClick);
+    if (filtersForm) {
+      filters.forEach((item) => {
+        item.classList.remove(`dropdown--nojs`);
+      });
+
+      filtersForm.addEventListener(`click`, onFilterClick);
+    }
+
+    if (faqList) {
+      faqItems.forEach((item) => {
+        item.classList.remove(`faq__item--nojs`);
+      });
+
+      faqList.addEventListener(`click`, onFaqItemClick);
+    }
   });
+})();
+
+'use strict';
+
+(() => {
+  const page = document.querySelector(`.page`);
+  const menu = document.querySelector('.header');
+  const toggle = document.querySelector('.header__nav-btn');
+  const menuNav = document.querySelector('.header__nav');
+
+  const switchScroll = () => {
+    page.classList.toggle(`page--no-scroll`);
+  };
+
+  const onMenuPressEsc = (evt) => {
+    if (evt.key === `Escape`) {
+      closeMenu();
+    }
+  };
+
+  const onMenuItemClick = (evt) => {
+    if (evt.target.tagName.toLowerCase() === `a`) {
+      closeMenu();
+    }
+  };
+
+  const openMenu = () => {
+    switchScroll();
+    menu.classList.remove(`header--closed`);
+    menu.classList.add(`header--opened`);
+    document.addEventListener(`keydown`, onMenuPressEsc);
+    menuNav.addEventListener(`click`, onMenuItemClick);
+  };
+
+  const closeMenu = () => {
+    switchScroll();
+    menu.classList.remove(`header--opened`);
+    menu.classList.add(`header--closed`);
+    document.removeEventListener(`keydown`, onMenuPressEsc);
+    menuNav.removeEventListener(`click`, onMenuItemClick);
+  };
+
+  if (menu && toggle) {
+    menu.classList.remove('header--nojs');
+    menu.classList.add(`header--closed`);
+
+    toggle.addEventListener(`click`, () => {
+      if (menu.classList.contains(`header--closed`)) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+  }
+})();
+
+'use strict';
+
+(() => {
+  const overlay = document.querySelector(`.overlay`);
+
+  const openModalButtons = document.querySelectorAll(`[data-modal-target]`);
+  const closeModalButtons = document.querySelectorAll(`[data-modal-close]`);
+
+  const onModalPressEsc = (evt, modal) => {
+    if (evt.key === `Escape`) {
+      closeModal(modal);
+    }
+  };
+
+
+  const openModal = (modal) => {
+    if (modal) {
+      modal.classList.add(`modal--opened`);
+      overlay.classList.add(`overlay--active`);
+      document.addEventListener(`keydown`, (evt) => {
+        onModalPressEsc(evt, modal);
+      });
+      overlay.addEventListener(`click`, () => {
+        closeModal(modal);
+      });
+
+      if (modal.classList.contains(`modal--login`)) {
+        window.form.fillForm();
+      }
+    }
+  };
+
+  const closeModal = (modal) => {
+    if (modal) {
+      modal.classList.remove(`modal--opened`);
+      overlay.classList.remove(`overlay--active`);
+      document.removeEventListener(`keydown`, (evt) => {
+        onModalPressEsc(evt, modal);
+      });
+      overlay.removeEventListener(`click`, () => {
+        closeModal(modal);
+      });
+    }
+  };
+
+  openModalButtons.forEach((btn) => {
+    btn.addEventListener(`click`, (evt) => {
+      evt.preventDefault();
+
+      const modal = document.querySelector(`.modal--${btn.dataset.modalTarget}`);
+      openModal(modal);
+    });
+  });
+
+  closeModalButtons.forEach((btn) => {
+    btn.addEventListener(`click`, () => {
+      const modal = btn.closest(`.modal`);
+      closeModal(modal);
+    });
+  });
+})();
+
+'use strict';
+
+(() => {
+  const loginForm = document.querySelector(`.login__form`);
+  const userEmail = document.querySelector(`[name=mail]`);
+  const userPass = document.querySelector(`[name=password]`);
+
+  let isStorageSupport = true;
+  let storageMail = ``;
+
+  try {
+    storageMail = localStorage.getItem(`email`);
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  const fillForm = () => {
+    if (storageMail) {
+      userEmail.value = storageMail;
+      userPass.focus();
+    } else {
+      userEmail.focus();
+    }
+  };
+
+  if (loginForm) {
+    loginForm.addEventListener(`submit`, (evt) => {
+      if (!userEmail.value || !userPass.value) {
+        evt.preventDefault();
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem(`email`, userEmail.value);
+        }
+      }
+    });
+  }
+
+  window.form = {
+    fillForm
+  }
 })();

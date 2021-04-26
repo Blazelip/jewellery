@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 11;
+
+  display: none;
+
+  transform: translate(-50%, -50%);
+
+  &--filter {
+    display: block;
+    position: initial;
+    transform: none;
+  }
+
+  &--login {
+    z-index: 25;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  @media #{$screen-tablet} {
+    &--filter {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      z-index: 20;
+    }
+
+    &--opened {
+      display: block;
+    }
+  }
+}

@@ -3,13 +3,20 @@
 
   background-color: $footer-bg-color;
 
-
   @media #{$screen-tablet} {
-    padding: 52px 0 58px;
+    padding: 52px 0 55px;
   }
 
   @media #{$screen-mobile} {
-    padding: 52px 0 64px;
+    padding: 50px 0 62px;
+  }
+
+  .page--product & {
+    padding: 90px 0 75px;
+
+    @media #{$screen-tablet} {
+      padding: 52px 0 55px;
+    }
   }
 }
 

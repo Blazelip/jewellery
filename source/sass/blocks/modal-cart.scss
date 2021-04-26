@@ -1,15 +1,8 @@
 .modal-cart {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-
-  display: none;
   width: 500px;
 
   background-color: $white;
   box-shadow: 0 4px 32px $modal-cart-box-shadow;
-
-  transform: translate(-50%, -50%);
 
   @media #{$screen-tablet} {
     width: 502px;
@@ -19,8 +12,24 @@
     width: 290px;
   }
 
-  &--opened {
-    display: block;
+  .page--modal & {
+    margin: 0 auto;
+  }
+}
+
+.modal-cart__container {
+  position: relative;
+
+  min-height: 439px;
+  padding: 46px 35px 55px;
+
+  @media #{$screen-tablet} {
+    padding: 46px 30px 55px;
+  }
+
+  @media #{$screen-mobile} {
+    min-height: 519px;
+    padding: 38px 15px 45px;
   }
 
   &::after {
@@ -37,30 +46,12 @@
   }
 }
 
-.modal-cart__container {
-  min-height: 439px;
-  padding: 46px 35px 55px;
-
-  @media #{$screen-tablet} {
-    padding: 46px 30px 55px;
-  }
-
-  @media #{$screen-tablet} {
-    min-height: 519px;
-    padding: 38px 15px 45px;
-  }
-}
-
 .modal-cart__title {
   @include font-mixin(26px, 34px);
 
   margin-bottom: 42px;
 
   text-align: center;
-}
-
-.modal-cart__form {
-
 }
 
 .modal-cart__panel {
@@ -166,9 +157,13 @@
     display: block;
   }
 
-  button {
+  a {
     width: 200px;
     padding: 23px 21px;
+
+    @media #{$screen-tablet} {
+      width: 206px;
+    }
 
     @media #{$screen-mobile} {
       width: 100%;

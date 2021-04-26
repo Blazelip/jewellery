@@ -1,0 +1,14 @@
+.dropdown--nojs,
+.dropdown--opened {
+  .dropdown__content {
+    display: block;
+  }
+
+  svg {
+    transform: rotate(-180deg);
+  }
+}
+
+.dropdown__content {
+  display: none;
+}

@@ -1,10 +1,4 @@
 .login {
-  position: fixed;
-
-  left: 50%;
-  top: 50%;
-
-  display: none;
   width: 430px;
 
   background-color: $modal-login-bg;
@@ -12,8 +6,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   box-shadow: 0 5px 32px $modal-box-shadow;
-
-  transform: translate(-50%, -50%);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/sweet-ice-cream-desktop@2x.png");
@@ -39,8 +31,8 @@
     }
   }
 
-  &--opened {
-    display: block;
+  .page--modal & {
+    margin: 0 auto;
   }
 }
 
@@ -81,7 +73,7 @@
     width: 100%;
     padding: 9px 0;
 
-    color: $modal-input-text-color;
+    color: $almost-black;
 
     background-color: transparent;
     border: 0;

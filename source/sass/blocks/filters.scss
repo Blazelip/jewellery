@@ -19,30 +19,33 @@
   @media #{$screen-tablet} {
     display: inline-block;
   }
+
+  .filters--nojs & {
+    @media #{$screen-tablet} {
+      display: none;
+    }
+  }
 }
 
 .filters__form {
   @media #{$screen-tablet} {
-    display: none;
-    position: fixed;
-
-    top: 50%;
-    left: 50%;
-
     width: 442px;
 
     background-color: $white;
     box-shadow: 0 5px 32px $filters-box-shadow;
-
-    transform: translate(-50%, -50%);
   }
 
   @media #{$screen-mobile} {
     width: 270px;
   }
 
-  &--opened {
-    display: block;
+  .filters--nojs & {
+    @media #{$screen-tablet} {
+      display: block;
+      position: static;
+      width: 100%;
+      transform: none;
+    }
   }
 }
 
@@ -185,5 +188,11 @@
     background-color: transparent;
     background-image: url("../img/close-filter.svg");
     background-repeat: no-repeat;
+  }
+
+  .filters--nojs & {
+    @media #{$screen-tablet} {
+      display: none;
+    }
   }
 }

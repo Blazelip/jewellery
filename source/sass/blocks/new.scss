@@ -11,10 +11,11 @@
 
   .page--product & {
     padding-top: 59px;
+    padding-bottom: 124px;
 
     @media #{$screen-tablet} {
       padding-top: 39px;
-      padding-bottom: 65px;
+      padding-bottom: 74px;
     }
 
     @media #{$screen-mobile} {

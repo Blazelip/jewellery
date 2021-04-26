@@ -142,10 +142,20 @@
   padding: 6px;
 
   color: $paginator-text-color;
-
-  &--active {
-    color: $default-font-color;
-  }
 }
 
+.swiper-pagination-bullet-active {
+  color: $default-font-color;
+}
 
+.swiper-pagination {
+  margin-top: 55px;
+
+  @media #{$screen-tablet} {
+    margin-top: 42px;
+  }
+
+  @media #{$screen-mobile} {
+    margin-top: 32px;
+  }
+}

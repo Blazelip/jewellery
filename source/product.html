@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page page--product">
-  <header class="header">
+  <header class="header header--nojs">
     <div class="header__wrapper wrapper">
       <button class="header__nav-btn button" type="button" aria-label="Open site menu">
-        <svg width="25" height="16">
+        <svg width="25" height="17">
           <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
         </svg>
       </button>
@@ -35,7 +35,7 @@
       </a>
 
       <div class="header__user-menu user-menu">
-        <a href="#" class="user-menu__link login-link login-link--desktop">Login</a>
+        <a data-modal-target="login" href="modal-login.html" class="user-menu__link login-link login-link--desktop">Login</a>
         <a href="#" class="user-menu__link">
           <svg class="user-menu__icon" width="18" height="16">
             <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
@@ -85,7 +85,7 @@
           </li>
         </ul>
 
-        <a href="#" class="nav__login login-link login-link--mobile">Log In</a>
+        <a data-modal-target="login" href="modal-login.html" class="nav__login login-link login-link--mobile">Log In</a>
       </nav>
     </div>
   </header>
@@ -169,7 +169,7 @@
             </tbody>
           </table>
 
-          <a href="#" class="offer__cta button button--main">Add to Cart</a>
+          <a data-modal-target="cart" href="modal-card.html" class="offer__cta button button--main">Add to Cart</a>
 
           <ul class="offer__features list">
             <li class="offer__features-item">14 Day Returns</li>
@@ -183,232 +183,210 @@
     <section class="new">
       <div class="new__wrapper wrapper">
         <h2 class="title">You May Also Like</h2>
-        <div class="new__controls controls">
-          <button class="controls__btn controls__btn--previous button" type="button" aria-label="Go to previous page">
-            <svg width="30" height="11">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
-            </svg>
-          </button>
-          <button class="controls__btn button" type="button" aria-label="Go to next page">
-            <svg width="30" height="11">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
-            </svg>
-          </button>
+        <div class="swiper-container">
+          <div class="new__controls controls">
+            <button class="controls__btn controls__btn--previous button swiper-button-prev" type="button" aria-label="Go to previous page">
+              <svg width="29" height="9">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+            <button class="controls__btn controls__btn--next button swiper-button-next" type="button" aria-label="Go to next page">
+              <svg width="29" height="9">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <p class="action">Shop Now</p>
+
+          <ul class="goods-list list swiper-wrapper">
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
+                    <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Necklace with amethyst</h3>
+                <p>$ 145</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
+                    <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" srcset="img/index/gold-necklace-desktop@1x.webp 1x, img/index/gold-necklace-desktop@2x.webp 2x">
+                    <img src="img/index/gold-necklace-desktop@1x.png" srcset="img/index/gold-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Gold chain</h3>
+                <p>$ 215</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" srcset="img/index/galaxy-earrings-desktop@1x.webp 1x, img/index/galaxy-earrings-desktop@2x.webp 2x">
+                    <img src="img/index/galaxy-earrings-desktop@1x.png" srcset="img/index/galaxy-earrings-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Galaxy earrings</h3>
+                <p>$ 95</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
+                    <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Necklace with amethyst</h3>
+                <p>$ 145</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
+                    <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
+                    <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Necklace with amethyst</h3>
+                <p>$ 145</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
+                    <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
+                    <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Necklace with amethyst</h3>
+                <p>$ 145</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
+                    <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
+                    <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Necklace with amethyst</h3>
+                <p>$ 145</p>
+              </article>
+            </li>
+            <li class="goods-list__item swiper-slide">
+              <article class="product">
+                <a href="#" class="product__link">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
+                    <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
+                    <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
+                  </picture>
+                </a>
+                <h3>Layered сhoker</h3>
+                <p>$ 115</p>
+              </article>
+            </li>
+          </ul>
+
+          <div class="swiper-pagination"></div>
         </div>
-        <p class="action">Shop Now</p>
-
-        <ul class="goods-list list">
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
-                  <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Necklace with amethyst</h3>
-              <p>$ 145</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
-                  <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Layered сhoker</h3>
-              <p>$ 115</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" srcset="img/index/gold-necklace-desktop@1x.webp 1x, img/index/gold-necklace-desktop@2x.webp 2x">
-                  <img src="img/index/gold-necklace-desktop@1x.png" srcset="img/index/gold-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Gold chain</h3>
-              <p>$ 215</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" srcset="img/index/galaxy-earrings-desktop@1x.webp 1x, img/index/galaxy-earrings-desktop@2x.webp 2x">
-                  <img src="img/index/galaxy-earrings-desktop@1x.png" srcset="img/index/galaxy-earrings-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Galaxy earrings</h3>
-              <p>$ 95</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
-                  <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Necklace with amethyst</h3>
-              <p>$ 145</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
-                  <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Layered сhoker</h3>
-              <p>$ 115</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
-                  <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Necklace with amethyst</h3>
-              <p>$ 145</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
-                  <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Layered сhoker</h3>
-              <p>$ 115</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
-                  <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Necklace with amethyst</h3>
-              <p>$ 145</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
-                  <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Layered сhoker</h3>
-              <p>$ 115</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.webp 1x, img/index/purple-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.webp 1x, img/index/purple-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/purple-necklace-desktop@1x.webp 1x, img/index/purple-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/purple-necklace-mobile@1x.png 1x, img/index/purple-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/purple-necklace-tablet@1x.png 1x, img/index/purple-necklace-tablet@2x.png 2x">
-                  <img src="img/index/purple-necklace-desktop@1x.png" srcset="img/index/purple-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Necklace with amethyst</h3>
-              <p>$ 145</p>
-            </article>
-          </li>
-          <li class="goods-list__item">
-            <article class="product">
-              <a href="#" class="product__link">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.webp 1x, img/index/choker-necklace-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.webp 1x, img/index/choker-necklace-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/index/choker-necklace-desktop@1x.webp 1x, img/index/choker-necklace-desktop@2x.webp 2x">
-                  <source media="(max-width: 767px)" srcset="img/index/choker-necklace-mobile@1x.png 1x, img/index/choker-necklace-mobile@2x.png 2x">
-                  <source media="(max-width: 1365px)" srcset="img/index/choker-necklace-tablet@1x.png 1x, img/index/choker-necklace-tablet@2x.png 2x">
-                  <img src="img/index/choker-necklace-desktop@1x.png" srcset="img/index/choker-necklace-desktop@2x.png 2x" alt="Some product">
-                </picture>
-              </a>
-              <h3>Layered сhoker</h3>
-              <p>$ 115</p>
-            </article>
-          </li>
-        </ul>
-
-        <ul class="paginator list">
-          <li class="paginator__item">
-            <button class="paginator__number paginator__number--active button">1</button>
-          </li>
-          <li class="paginator__item">
-            <button class="paginator__number button">2</button>
-          </li>
-          <li class="paginator__item">
-            <button class="paginator__number button">3</button>
-          </li>
-          <li class="paginator__item">
-            <button class="paginator__number button">4</button>
-          </li>
-          <li class="paginator__item">
-            <button class="paginator__number button">5</button>
-          </li>
-          <li class="paginator__item">
-            <button class="paginator__number button">6</button>
-          </li>
-        </ul>
-
-        <form class="paginator-form" action="https://echo.htmlacademy.ru/" method="POST">
-          <input type="text" name="page" value="1">
-          <span>of 6</span>
-        </form>
       </div>
     </section>
   </main>
@@ -484,7 +462,7 @@
     </div>
   </footer>
 
-  <section class="login">
+  <section class="login modal modal--login">
     <div class="login__container">
       <h3 class="title">Log In</h3>
 
@@ -495,8 +473,8 @@
           </div>
 
           <div class="login__field">
-            <label class="visually-hidden" for="password-field">Your E-mail</label>
-            <input type="password" id="password-field" name="mail" placeholder="Password">
+            <label class="visually-hidden" for="password-field">Password</label>
+            <input type="password" id="password-field" name="password" placeholder="Password">
           </div>
 
           <a href="#" class="login__forgot">Forgot your password?</a>
@@ -510,10 +488,11 @@
       </div>
     </div>
 
-    <button class="close-cross button" type="button" aria-label="close modal"></button>
+    <button data-modal-close class="close-cross button" type="button" aria-label="close modal"></button>
   </section>
 
-  <section class="modal-cart">
+
+  <section class="modal-cart modal modal--cart">
     <div class="modal-cart__container">
       <h3 class="modal-cart__title title">The item was added to your cart</h3>
 
@@ -557,13 +536,15 @@
         </div>
 
         <div class="modal-cart__btns">
-          <button class="button button--additional" type="button">Continue shopping</button>
-          <button class="button button--main" type="submit">Checkout</button>
+          <a class="button button--additional" href="catalog.html" type="button">Continue shopping</a>
+          <a class="button button--main" href="cart.html" type="submit">Checkout</a>
         </div>
       </form>
     </div>
-    <button class="close-cross button" type="button" aria-label="close modal"></button>
+    <button data-modal-close class="close-cross button" type="button" aria-label="close modal"></button>
   </section>
+
+  <div class="overlay"></div>
 
   <script src="js/main.js"></script>
 </body>
