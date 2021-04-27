@@ -50,8 +50,8 @@
           <svg width="16" height="16">
             <use xlink:href="img/sprite_auto.svg#icon-search"></use>
           </svg>
-          <label class="visually-hidden" for="search-field">Type here to search</label>
-          <input type="search" id="search-field" name="search">
+          <label class="visually-hidden" for="search-field-nav">Type here to search</label>
+          <input type="search" id="search-field-nav" name="search">
           <button class="visually-hidden" type="submit">Search</button>
         </form>
 
@@ -104,7 +104,8 @@
                 <source type="image/webp" srcset="img/product/necklace-detail-thumb-desktop@1x.webp 1x, img/product/necklace-detail-thumb-desktop@2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/product/necklace-detail-thumb-mobile@1x.jpg 1x, img/product/necklace-detail-thumb-mobile@2x.jpg 2x">
                 <source media="(max-width: 1365px)" srcset="img/product/necklace-detail-thumb-tablet@1x.jpg 1x, img/product/necklace-detail-thumb-tablet@2x.jpg 2x">
-                <img src="img/product/necklace-detail-thumb-desktop@1x.jpg" srcset="img/product/necklace-detail-thumb-desktop@2x.jpg 2x" alt="Some product">
+                <!-- 1x: 84px; 2x: 168px -->
+                <img src="img/product/necklace-detail-thumb-desktop@1x.jpg" srcset="img/product/necklace-detail-thumb-desktop@2x.jpg 2x" alt="Some product" width="84" height="79">
               </picture>
               <div class="modal-cart__text">
                 <h4>Gold Necklace</h4>
@@ -136,8 +137,8 @@
             </div>
 
             <div class="modal-cart__btns">
-              <a class="button button--additional" href="catalog.html" type="button">Continue shopping</a>
-              <a class="button button--main" href="cart.html" type="submit">Checkout</a>
+              <a class="button button--additional" href="catalog.html">Continue shopping</a>
+              <a class="button button--main" href="cart.html">Checkout</a>
             </div>
           </form>
         </div>
