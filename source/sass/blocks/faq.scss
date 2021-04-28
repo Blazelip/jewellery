@@ -34,32 +34,24 @@
   border: 1px solid $faq-border-color;
 
   p {
-    display: none;
     max-width: 515px;
     margin: 0;
-    margin-top: 8px;
-    padding-left: 10px;
+    // margin-top: 8px;
+    // padding-left: 10px;
 
     font-weight: 400;
 
     @media #{$screen-tablet} {
       max-width: 575px;
-      margin-top: 29px;
-      padding-left: 0;
+      // margin-top: 29px;
+      // padding-left: 0;
     }
 
     @media #{$screen-mobile} {
       @include font-mixin(14px, 20px);
 
       max-width: 205px;
-      margin-top: 14px;
-    }
-  }
-
-  &--opened,
-  &--nojs {
-    p {
-      display: block;
+      // margin-top: 14px;
     }
   }
 }
@@ -80,10 +72,12 @@
     padding: 17px 24px 21px;
   }
 
-  h3 {
-    @include font-mixin(18px, 23px);
+  .dropdown--opened & {
+    padding-bottom: 0;
+  }
 
-    margin: 0;
+  span {
+    @include font-mixin(18px, 23px);
 
     font-weight: 500;
 
@@ -110,10 +104,18 @@
       top: 23px;
       right: 22px;
     }
+  }
+}
 
-    .faq__item--opened & {
-      transform: rotate(-180deg);
-    }
+.faq__content {
+  padding: 8px 52px 42px;
+
+  @media #{$screen-tablet} {
+    padding: 29px 48px 42px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 14px 24px 24px;
   }
 }
 

@@ -1340,25 +1340,17 @@ img {
   margin-top: -1px;
   border: 1px solid #a87b62; }
   .faq__item p {
-    display: none;
     max-width: 515px;
     margin: 0;
-    margin-top: 8px;
-    padding-left: 10px;
     font-weight: 400; }
     @media (max-width: 1365px) {
       .faq__item p {
-        max-width: 575px;
-        margin-top: 29px;
-        padding-left: 0; } }
+        max-width: 575px; } }
     @media (max-width: 767px) {
       .faq__item p {
         font-size: 14px;
         line-height: 20px;
-        max-width: 205px;
-        margin-top: 14px; } }
-  .faq__item--opened p, .faq__item--nojs p {
-    display: block; }
+        max-width: 205px; } }
 
 .faq__control {
   position: relative;
@@ -1371,13 +1363,14 @@ img {
   @media (max-width: 767px) {
     .faq__control {
       padding: 17px 24px 21px; } }
-  .faq__control h3 {
+  .dropdown--opened .faq__control {
+    padding-bottom: 0; }
+  .faq__control span {
     font-size: 18px;
     line-height: 23px;
-    margin: 0;
     font-weight: 500; }
     @media (max-width: 767px) {
-      .faq__control h3 {
+      .faq__control span {
         font-size: 16px;
         line-height: 22px; } }
   .faq__control svg {
@@ -1394,9 +1387,15 @@ img {
       .faq__control svg {
         top: 23px;
         right: 22px; } }
-    .faq__item--opened .faq__control svg {
-      -webkit-transform: rotate(-180deg);
-              transform: rotate(-180deg); }
+
+.faq__content {
+  padding: 8px 52px 42px; }
+  @media (max-width: 1365px) {
+    .faq__content {
+      padding: 29px 48px 42px; } }
+  @media (max-width: 767px) {
+    .faq__content {
+      padding: 14px 24px 24px; } }
 
 .faq__break {
   display: none; }
@@ -1560,11 +1559,6 @@ img {
       border-top: 0;
       border-left: 0;
       border-right: 0; } }
-  .filters__set h3 {
-    font-size: 16px;
-    line-height: 21px;
-    margin: 0;
-    font-weight: 500; }
   .filters__set svg {
     fill: none;
     color: #a87b62; }
@@ -1576,9 +1570,6 @@ img {
       .filters__set svg {
         width: 20px;
         height: 10px; } }
-  .filters__set--opened svg {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg); }
 
 .filters__control {
   display: -webkit-box;
@@ -1598,6 +1589,11 @@ img {
   @media (max-width: 767px) {
     .filters__control {
       padding: 25px 20px; } }
+  .filters__control span {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+    font-weight: 500; }
 
 .filters__list {
   display: none;
