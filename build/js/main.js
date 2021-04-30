@@ -9658,7 +9658,7 @@
     },
     breakpoints: {
       // when window width is >= 1024px
-      1366: {
+      1024: {
         slidesPerView: 4,
         spaceBetween: 30,
         slidesPerGroup: 4,
@@ -9701,6 +9701,7 @@
 
     const dropdowns = document.querySelectorAll(`.dropdown`);
     const dropdownBtns = document.querySelectorAll(`.dropdown__btn`);
+    const filters = document.querySelector(`.filters`);
 
     const onDropdownBtnClick = (btn) => {
       if (btn) {
@@ -9718,6 +9719,10 @@
           onDropdownBtnClick(btn);
         });
       });
+    }
+
+    if (filters) {
+      filters.classList.remove(`filters--nojs`);
     }
   });
 })();

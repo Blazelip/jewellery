@@ -18,7 +18,7 @@
     },
     breakpoints: {
       // when window width is >= 1024px
-      1366: {
+      1024: {
         slidesPerView: 4,
         spaceBetween: 30,
         slidesPerGroup: 4,

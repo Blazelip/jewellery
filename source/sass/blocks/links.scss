@@ -2,15 +2,18 @@
   display: flex;
   justify-content: space-between;
   width: 30.5%;
+  padding-top: 7px;
 
   @media #{$screen-tablet} {
     width: 54.6%;
+    padding-top: 1px;
   }
 
   @media #{$screen-mobile} {
     display: block;
     width: auto;
     margin-bottom: 49px;
+    padding-top: 0px;
   }
 }
 

@@ -3,7 +3,7 @@
   height: 100%;
 
   background-repeat: no-repeat;
-  background-size: 285px;
+  background-size: contain;
 
   &--care {
     background-image: url("../img/index/blog-care-desktop@1x.png");
@@ -23,7 +23,7 @@
 
     @media #{$screen-mobile} {
       background-image: url("../img/index/blog-care-mobile@1x.png");
-      background-size: contain;
+      background-size: 100%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/blog-care-mobile@2x.png");
@@ -33,7 +33,7 @@
 
   &--trends {
     background-image: url("../img/index/blog-trends-desktop@1x.png");
-    background-size: 570px;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/blog-trends-desktop@2x.png");
@@ -50,7 +50,7 @@
 
     @media #{$screen-mobile} {
       background-image: url("../img/index/blog-trends-mobile@1x.png");
-      background-size: contain;
+      background-size: 100%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/blog-trends-mobile@2x.png");
@@ -60,7 +60,6 @@
 
   &--power {
     background-image: url("../img/index/power-desktop@1x.png");
-    background-size: 285px;
     background-position: right 0 top 0;
 
     @media (min-resolution: 2dppx) {
@@ -78,7 +77,7 @@
 
     @media #{$screen-mobile} {
       background-image: url("../img/index/power-mobile@1x.png");
-      background-size: contain;
+      background-size: 100%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index/power-mobile@2x.png");
@@ -98,10 +97,10 @@
   align-self: flex-end;
   align-items: center;
 
-  width: 285px;
-  height: 300px;
+  width: 50%;
+  min-height: 300px;
   margin-left: auto;
-  padding: 66px 61px;
+  padding: 11.58% 10.7%;
 
   background-color: $post-bg-color;
 
@@ -117,7 +116,7 @@
 
   @media #{$screen-mobile} {
     width: auto;
-    height: 256px;
+    min-height: 256px;
     margin-left: 0;
     margin-top: auto;
     padding: 45px 63px;

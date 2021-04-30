@@ -5,6 +5,7 @@
 
     const dropdowns = document.querySelectorAll(`.dropdown`);
     const dropdownBtns = document.querySelectorAll(`.dropdown__btn`);
+    const filters = document.querySelector(`.filters`);
 
     const onDropdownBtnClick = (btn) => {
       if (btn) {
@@ -22,6 +23,10 @@
           onDropdownBtnClick(btn);
         });
       });
+    }
+
+    if (filters) {
+      filters.classList.remove(`filters--nojs`);
     }
   });
 })();

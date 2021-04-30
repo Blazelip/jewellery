@@ -29,18 +29,6 @@
       margin-bottom: 21px;
     }
   }
-
-  p {
-    margin-bottom: 60px;
-
-    @media #{$screen-tablet} {
-      margin-bottom: 52px;
-    }
-
-    @media #{$screen-mobile} {
-      margin-bottom: 42px;
-    }
-  }
 }
 
 .new__wrapper {
@@ -61,5 +49,17 @@
       width: 36px;
       height: 15px;
     }
+  }
+}
+
+.new__action {
+  margin-bottom: 60px;
+
+  @media #{$screen-tablet} {
+    margin-bottom: 52px;
+  }
+
+  @media #{$screen-mobile} {
+    margin-bottom: 42px;
   }
 }

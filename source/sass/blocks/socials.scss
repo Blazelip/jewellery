@@ -1,9 +1,10 @@
 .socials {
   margin-left: auto;
-
+  padding-top: 6px;
 
   @media #{$screen-tablet} {
     margin-left: 12.8%;
+    padding-top: 0;
   }
 
   @media #{$screen-mobile} {

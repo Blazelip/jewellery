@@ -12,20 +12,20 @@
   h2 {
     margin-bottom: 21px;
   }
-
-  p {
-    margin-bottom: 63px;
-
-    @media #{$screen-tablet} {
-      margin-bottom: 62px;
-    }
-
-    @media #{$screen-mobile} {
-      margin-bottom: 52px;
-    }
-  }
 }
 
 .blog__wrapper {
   text-align: center;
+}
+
+.blog__action {
+  margin-bottom: 63px;
+
+  @media #{$screen-tablet} {
+    margin-bottom: 62px;
+  }
+
+  @media #{$screen-mobile} {
+    margin-bottom: 52px;
+  }
 }

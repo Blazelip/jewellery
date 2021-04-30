@@ -1,6 +1,10 @@
 .page {
   @include font-mixin(16px, 21px);
 
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 100%;
+
   min-width: 320px;
   margin: 0;
   padding: 0;
