@@ -2,8 +2,8 @@
 
 (() => {
   const loginForm = document.querySelector(`.login__form`);
-  const userEmail = document.querySelector(`[name=mail]`);
-  const userPass = document.querySelector(`[name=password]`);
+  const userEmail = loginForm.querySelector(`[name=mail]`);
+  const userPass = loginForm.querySelector(`[name=password]`);
 
   let isStorageSupport = true;
   let storageMail = ``;

@@ -9779,11 +9779,16 @@
       }
     });
   }
+
+  window.burger = {
+    switchScroll
+  }
 })();
 
 'use strict';
 
 (() => {
+  const page = document.querySelector(`.page`);
   const overlay = document.querySelector(`.overlay`);
 
   const openModalButtons = document.querySelectorAll(`[data-modal-target]`);
@@ -9795,10 +9800,10 @@
     }
   };
 
-
   const openModal = (modal) => {
     if (modal) {
       modal.classList.add(`modal--opened`);
+      window.burger.switchScroll();
       overlay.classList.add(`overlay--active`);
       document.addEventListener(`keydown`, (evt) => {
         onModalPressEsc(evt, modal);
@@ -9816,6 +9821,7 @@
   const closeModal = (modal) => {
     if (modal) {
       modal.classList.remove(`modal--opened`);
+      window.burger.switchScroll();
       overlay.classList.remove(`overlay--active`);
       document.removeEventListener(`keydown`, (evt) => {
         onModalPressEsc(evt, modal);
@@ -9847,8 +9853,8 @@
 
 (() => {
   const loginForm = document.querySelector(`.login__form`);
-  const userEmail = document.querySelector(`[name=mail]`);
-  const userPass = document.querySelector(`[name=password]`);
+  const userEmail = loginForm.querySelector(`[name=mail]`);
+  const userPass = loginForm.querySelector(`[name=password]`);
 
   let isStorageSupport = true;
   let storageMail = ``;

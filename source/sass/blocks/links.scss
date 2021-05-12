@@ -13,11 +13,17 @@
     display: block;
     width: auto;
     margin-bottom: 49px;
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 
 .links__column {
+  @media #{$screen-only-desktop} {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
   @media #{$screen-mobile} {
     margin-bottom: 44px;
 

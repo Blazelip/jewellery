@@ -50,4 +50,8 @@
       }
     });
   }
+
+  window.burger = {
+    switchScroll
+  }
 })();

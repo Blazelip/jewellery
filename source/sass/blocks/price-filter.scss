@@ -1,11 +1,9 @@
 .price-filter {
-  padding-bottom: 17px;
+  padding: 0 10% 17px;
 }
 
 .price-filter__scale {
   position: relative;
-
-  padding: 0 25px;
 }
 
 .price-filter__line {
@@ -20,13 +18,13 @@
     content: "";
 
     position: absolute;
-    left: 45px;
+    left: 30%;
     top: 0;
     z-index: 1;
 
     display: block;
 
-    width: 60%;
+    width: 45%;
     height: 1px;
 
     background-color: $brown;
@@ -35,7 +33,7 @@
 
 .price-filter__toggle {
   position: absolute;
-  left: 69px;
+  left: 22.8%;
   top: -7px;
 
   width: 15px;
@@ -47,13 +45,13 @@
   cursor: grab;
 
   &--max {
-    left: 175px;
+    left: 75%;
   }
 }
 
 .price-filter__fields {
   display: flex;
-  padding-left: 60px;
+  padding-left: 18%;
 }
 
 .price-filter__field {

@@ -1,17 +1,17 @@
 .close-cross {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
 
-  width: 14px;
-  height: 14px;
+  width: 28px;
+  height: 28px;
 
   background-image: url("../img/close-cross.svg");
   background-repeat: no-repeat;
   background-position: center;
 
   @media #{$screen-mobile} {
-    right: 15px;
-    top: 15px;
+    right: 10px;
+    top: 10px;
   }
 }

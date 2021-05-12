@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keyowrds" content="">
-  <meta name="description" content="">
+  <meta name="keyowrds" content="Какие-то ключевые слова">
+  <meta name="description" content="Какое-то описание сайта">
   <title>Online Jewelerry Store CH</title>
   <link rel="preload" href="fonts/poppins-500.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <div class="page page--catalog">
+<body class="page page--catalog">
     <header class="header header--nojs">
       <div class="header__wrapper wrapper">
         <button class="header__nav-btn button" type="button" aria-label="Open site menu">
@@ -482,7 +481,7 @@
 
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="POST">
             <label class="visually-hidden" for="email-field">Subscribe us</label>
-            <input type="email" id="email-field" name="mail" placeholder="Your E-mail">
+            <input type="email" id="email-field" name="mail" placeholder="Your E-mail" required="">
             <button class="subscribe__btn button" type="submit">
               <span>Sign Up</span>
               <svg width="30" height="11">
@@ -550,19 +549,23 @@
         <h3 class="title">Log In</h3>
 
         <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <div class="login__fields-container">
             <div class="login__field">
               <label class="visually-hidden" for="mail-field">Your E-mail</label>
-              <input type="email" id="mail-field" name="mail" placeholder="Your E-mail">
+              <input type="email" id="mail-field" name="mail" placeholder="Your E-mail" required="">
             </div>
 
             <div class="login__field">
-              <label class="visually-hidden" for="password-field">Your E-mail</label>
-              <input type="password" id="password-field" name="mail" placeholder="Password">
+              <label class="visually-hidden" for="password-field">Password</label>
+              <input type="password" id="password-field" name="password" placeholder="Password" required="">
             </div>
+          </div>
 
+          <div class="login__forgot-container">
             <a href="#" class="login__forgot">Forgot your password?</a>
+          </div>
 
-            <button class="login__button button button--main" type="submit">Log In</button>
+          <button class="login__button button button--main" type="submit">Log In</button>
         </form>
 
         <div class="login__signup">
@@ -575,7 +578,6 @@
     </section>
 
     <div class="overlay"></div>
-  </div>
   <script src="js/main.js"></script>
 </body>
 </html>

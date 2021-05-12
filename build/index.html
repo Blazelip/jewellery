@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keyowrds" content="">
-  <meta name="description" content="">
+  <meta name="keyowrds" content="Какие-то ключевые слова">
+  <meta name="description" content="Какое-то описание сайта">
   <title>Online Jewelerry Store CH</title>
   <link rel="preload" href="fonts/poppins-500.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
@@ -24,7 +24,7 @@
           <use xlink:href="img/sprite_auto.svg#icon-search"></use>
         </svg>
         <label class="visually-hidden" for="search-field">Type here to search</label>
-        <input type="search" id="search-field" name="search" placeholder="Type here to search">
+        <input type="search" id="search-field" name="search" placeholder="Type here to search" required="">
         <button class="visually-hidden" type="submit">Search</button>
       </form>
 
@@ -51,7 +51,7 @@
             <use xlink:href="img/sprite_auto.svg#icon-search"></use>
           </svg>
           <label class="visually-hidden" for="search-field-nav">Type here to search</label>
-          <input type="search" id="search-field-nav" name="search">
+          <input type="search" id="search-field-nav" name="search" required="">
           <button class="visually-hidden" type="submit">Search</button>
         </form>
 
@@ -116,7 +116,7 @@
               </svg>
             </button>
           </div>
-          <a class="new__action action">Shop Now</a>
+          <a href="#" class="new__action action">Shop Now</a>
 
           <ul class="goods-list list swiper-wrapper">
             <li class="goods-list__item swiper-slide">
@@ -325,7 +325,7 @@
     <section class="blog">
       <div class="blog__wrapper wrapper">
         <h2 class="blog__title title">Blog</h2>
-        <a class="blog__action action">Read All</a>
+        <a href="#" class="blog__action action">Read All</a>
 
         <ul class="blog__articles articles list">
           <li class="articles__item">
@@ -428,7 +428,7 @@
     <section class="insta">
       <div class="wrapper">
         <h2 class="title">@Chjewellery</h2>
-        <a class="insta__action action">Follow Us</a>
+        <a href="#" class="insta__action action">Follow Us</a>
 
         <ul class="insta__photos list">
           <li class="insta__item insta__item--1">
@@ -515,7 +515,7 @@
 
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="POST">
           <label class="visually-hidden" for="email-field">Subscribe us</label>
-          <input type="email" id="email-field" name="mail" placeholder="Your E-mail">
+          <input type="email" id="email-field" name="mail" placeholder="Your E-mail" required="">
           <button class="subscribe__btn button" type="submit">
             <span>Sign Up</span>
             <svg width="30" height="11">
@@ -583,19 +583,23 @@
       <h3 class="title">Log In</h3>
 
       <form class="login__form" action="https://echo.htmlacademy.ru/" method="POST">
+        <div class="login__fields-container">
           <div class="login__field">
             <label class="visually-hidden" for="mail-field">Your E-mail</label>
-            <input type="email" id="mail-field" name="mail" placeholder="Your E-mail">
+            <input type="email" id="mail-field" name="mail" placeholder="Your E-mail" required="">
           </div>
 
           <div class="login__field">
             <label class="visually-hidden" for="password-field">Password</label>
-            <input type="password" id="password-field" name="password" placeholder="Password">
+            <input type="password" id="password-field" name="password" placeholder="Password" required="">
           </div>
+        </div>
 
+        <div class="login__forgot-container">
           <a href="#" class="login__forgot">Forgot your password?</a>
+        </div>
 
-          <button class="login__button button button--main" type="submit">Log In</button>
+        <button class="login__button button button--main" type="submit">Log In</button>
       </form>
 
       <div class="login__signup">

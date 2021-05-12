@@ -10,8 +10,7 @@
   <link rel="preload" href="fonts/poppins-500.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <div class="page page--modal">
+<body class="page page--modal">
     <header class="header header--nojs">
       <div class="header__wrapper wrapper">
         <button class="header__nav-btn button" type="button" aria-label="Open site menu">
@@ -25,7 +24,7 @@
             <use xlink:href="img/sprite_auto.svg#icon-search"></use>
           </svg>
           <label class="visually-hidden" for="search-field">Type here to search</label>
-          <input type="search" id="search-field" name="search" placeholder="Type here to search">
+          <input type="search" id="search-field" name="search" placeholder="Type here to search" required>
           <button class="visually-hidden" type="submit">Search</button>
         </form>
 
@@ -52,7 +51,7 @@
               <use xlink:href="img/sprite_auto.svg#icon-search"></use>
             </svg>
             <label class="visually-hidden" for="search-field-nav">Type here to search</label>
-            <input type="search" id="search-field-nav" name="search">
+            <input type="search" id="search-field-nav" name="search" required>
             <button class="visually-hidden" type="submit">Search</button>
           </form>
 
@@ -155,7 +154,7 @@
 
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="POST">
             <label class="visually-hidden" for="email-field">Subscribe us</label>
-            <input type="email" id="email-field" name="mail" placeholder="Your E-mail">
+            <input type="email" id="email-field" name="mail" placeholder="Your E-mail" required>
             <button class="subscribe__btn button" type="submit">
               <span>Sign Up</span>
               <svg width="30" height="11">
@@ -217,7 +216,6 @@
         </ul>
       </div>
     </footer>
-  </div>
   <script src="js/main.js"></script>
 </body>
 </html>
