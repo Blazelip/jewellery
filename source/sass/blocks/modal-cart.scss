@@ -43,6 +43,10 @@
     height: 1px;
 
     background-color: $pseudo-border-color;
+
+    @media #{$screen-mobile} {
+      top: 45%;
+    }
   }
 }
 

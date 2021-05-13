@@ -106,133 +106,135 @@
           <h2 class="visually-hidden">Product filters</h2>
           <button data-modal-target="filter" class="filters__main-control button button--main" type="button">Filter</button>
           <form class="filters__form modal modal--filter" action="https://echo.htmlacademy.ru/" method="GET">
-            <div class="filters__set dropdown dropdown--nojs">
-              <button class="filters__control button dropdown__btn" type="button">
-                <span>Product</span>
-                <svg width="15" height="8">
-                  <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
-                </svg>
-              </button>
+            <div class="scroll-container">
+              <div class="filters__set dropdown dropdown--nojs">
+                <button class="filters__control button dropdown__btn" type="button">
+                  <span>Product</span>
+                  <svg width="15" height="8">
+                    <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+                  </svg>
+                </button>
 
-              <ul class="filters__list list dropdown__content">
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="product" value="necklaces" id="necklaces">
-                    <span class="filters__checkbox"></span>
-                    Necklaces
-                  </label>
-                </li>
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="product" value="chokers" id="chokers">
-                    <span class="filters__checkbox"></span>
-                    Chokers
-                  </label>
-                </li>
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="product" value="rings" id="rings">
-                    <span class="filters__checkbox"></span>
-                    Rings
-                  </label>
-                </li>
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="product" value="earrings" id="earrings">
-                    <span class="filters__checkbox"></span>
-                    Earrings
-                  </label>
-                </li>
-              </ul>
-            </div>
+                <ul class="filters__list list dropdown__content">
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="product" value="necklaces" id="necklaces">
+                      <span class="filters__checkbox"></span>
+                      Necklaces
+                    </label>
+                  </li>
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="product" value="chokers" id="chokers">
+                      <span class="filters__checkbox"></span>
+                      Chokers
+                    </label>
+                  </li>
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="product" value="rings" id="rings">
+                      <span class="filters__checkbox"></span>
+                      Rings
+                    </label>
+                  </li>
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="product" value="earrings" id="earrings">
+                      <span class="filters__checkbox"></span>
+                      Earrings
+                    </label>
+                  </li>
+                </ul>
+              </div>
 
-            <div class="filters__set dropdown dropdown--nojs">
-              <button class="filters__control button dropdown__btn" type="button">
-                <span>Material</span>
-                <svg width="15" height="8">
-                  <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
-                </svg>
-              </button>
+              <div class="filters__set dropdown dropdown--nojs">
+                <button class="filters__control button dropdown__btn" type="button">
+                  <span>Material</span>
+                  <svg width="15" height="8">
+                    <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+                  </svg>
+                </button>
 
-              <ul class="filters__list list dropdown__content">
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="material" value="gold" id="gold">
-                    <span class="filters__checkbox"></span>
-                    Gold
-                  </label>
-                </li>
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="material" value="silver" id="silver">
-                    <span class="filters__checkbox"></span>
-                    Silver
-                  </label>
-                </li>
-              </ul>
-            </div>
+                <ul class="filters__list list dropdown__content">
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="material" value="gold" id="gold">
+                      <span class="filters__checkbox"></span>
+                      Gold
+                    </label>
+                  </li>
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="material" value="silver" id="silver">
+                      <span class="filters__checkbox"></span>
+                      Silver
+                    </label>
+                  </li>
+                </ul>
+              </div>
 
-            <div class="filters__set dropdown dropdown--nojs">
-              <button class="filters__control button dropdown__btn" type="button">
-                <span>Collection</span>
-                <svg width="15" height="8">
-                  <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
-                </svg>
-              </button>
+              <div class="filters__set dropdown dropdown--nojs">
+                <button class="filters__control button dropdown__btn" type="button">
+                  <span>Collection</span>
+                  <svg width="15" height="8">
+                    <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+                  </svg>
+                </button>
 
-              <ul class="filters__list list dropdown__content">
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="collection" value="pink-flamingo" id="pink-flamingo">
-                    <span class="filters__checkbox"></span>
-                    Pink flamingo
-                  </label>
-                </li>
-                <li class="filters__item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="collection" value="dreams" id="dreams">
-                    <span class="filters__checkbox"></span>
-                    Dreams
-                  </label>
-                </li>
-              </ul>
-            </div>
+                <ul class="filters__list list dropdown__content">
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="collection" value="pink-flamingo" id="pink-flamingo">
+                      <span class="filters__checkbox"></span>
+                      Pink flamingo
+                    </label>
+                  </li>
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="collection" value="dreams" id="dreams">
+                      <span class="filters__checkbox"></span>
+                      Dreams
+                    </label>
+                  </li>
+                </ul>
+              </div>
 
-            <div class="filters__set dropdown dropdown--nojs">
-              <button class="filters__control button dropdown__btn" type="button">
-                <span>Price</span>
-                <svg width="15" height="8">
-                  <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
-                </svg>
-              </button>
+              <div class="filters__set dropdown dropdown--nojs">
+                <button class="filters__control button dropdown__btn" type="button">
+                  <span>Price</span>
+                  <svg width="15" height="8">
+                    <use xlink:href="img/sprite_auto.svg#icon-arrow-bottom"></use>
+                  </svg>
+                </button>
 
-              <div class="price-filter dropdown__content">
-                <div class="price-filter__scale">
-                  <div class="price-filter__line"></div>
-                  <button type="button" class="button price-filter__toggle price-filter__toggle--min" aria-label="Min price"></button>
-                  <button type="button" class="button price-filter__toggle price-filter__toggle--max" aria-label="Max price"></button>
-                </div>
-                <div class="price-filter__fields">
-                  <div class="price-filter__field">
-                    <span>$</span>
-                    <label class="visually-hidden" for="min-price">Set min price</label>
-                    <input type="number" name="min-price" id="min-price" value="55">
+                <div class="price-filter dropdown__content">
+                  <div class="price-filter__scale">
+                    <div class="price-filter__line"></div>
+                    <button type="button" class="button price-filter__toggle price-filter__toggle--min" aria-label="Min price"></button>
+                    <button type="button" class="button price-filter__toggle price-filter__toggle--max" aria-label="Max price"></button>
                   </div>
-                  <div class="price-filter__field">
-                    <span>$</span>
-                    <label class="visually-hidden" for="max-price">Set max price</label>
-                    <input type="number" name="max-price" id="max-price" value="155">
+                  <div class="price-filter__fields">
+                    <div class="price-filter__field">
+                      <span>$</span>
+                      <label class="visually-hidden" for="min-price">Set min price</label>
+                      <input type="number" name="min-price" id="min-price" value="55">
+                    </div>
+                    <div class="price-filter__field">
+                      <span>$</span>
+                      <label class="visually-hidden" for="max-price">Set max price</label>
+                      <input type="number" name="max-price" id="max-price" value="155">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="filters__btn-container">
-              <button class="filters__btn button button--main" type="submit">Apply</button>
-              <button class="filters__btn button button--additional" type="reset">Clear All</button>
-            </div>
+              <div class="filters__btn-container">
+                <button class="filters__btn button button--main" type="submit">Apply</button>
+                <button class="filters__btn button button--additional" type="reset">Clear All</button>
+              </div>
 
-            <button data-modal-close="" class="filters__close button" type="button" aria-label="close modal"></button>
+              <button data-modal-close="" class="filters__close button" type="button" aria-label="close modal"></button>
+            </div>
           </form>
         </section>
 

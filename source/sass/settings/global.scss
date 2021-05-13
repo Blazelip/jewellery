@@ -23,3 +23,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.scroll-container {
+  @media #{$screen-tablet} {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}

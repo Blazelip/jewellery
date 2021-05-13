@@ -9,6 +9,10 @@
     .header--closed & {
       display: none;
     }
+
+    .header--opened & {
+      overflow-y: auto;
+    }
   }
 
   .header--opened &,

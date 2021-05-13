@@ -39,7 +39,8 @@ gulp.task('javascript', function () {
     './source/js/accordion.js',
     './source/js/burger.js',
     './source/js/modal.js',
-    './source/js/form.js'
+    './source/js/form.js',
+    './source/js/noscroll.js',
   ])
       .pipe(concat('main.js'))
       .pipe(gulp.dest('build/js'));
